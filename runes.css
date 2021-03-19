@@ -14,6 +14,23 @@
     color: #745B9A;
 }
 
+#low-runes {
+    color: #745B9A;
+}
+
+.accordion-flush .accordion-button {
+    color: white;
+    border-top: 1px solid white;
+}
+
+.accordion-button::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    font-weight: 900;
+    color: white;
+    background-image: none;
+}
+
 #mid-runes {
     border-left: 20px solid #eca72c;
 }

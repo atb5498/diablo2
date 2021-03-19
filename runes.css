@@ -2,6 +2,34 @@
     height: 25%;
 }
 
+.list-group {
+    padding: 20px;
+}
+
+#low-runes {
+    border-left: 20px solid #745B9A;
+}
+
+#low-runes h2 {
+    color: #745B9A;
+}
+
+#mid-runes {
+    border-left: 20px solid #eca72c;
+}
+
+#mid-runes h2 {
+    color: #eca72c;
+}
+
+#high-runes {
+    border-left: 20px solid #ee5622;
+}
+
+#high-runes h2 {
+    color: #ee5622;
+}
+
 .list-group-item {
     background-color: transparent;
     border-color: white;

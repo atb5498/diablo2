@@ -13,6 +13,10 @@ h1, .navbar-brand {
     font-family: exocet, serif;
 }
 
+h2 {
+    font-weight: bold;
+}
+
 .navbar {
     background-color: #0B0A0B !important;
 }
@@ -36,11 +40,11 @@ h1, .navbar-brand {
     width: 75%;
 }
 
-.home-categories {
+#home-categories {
     text-align: center;
 }
 
-.home-categories h2 {
+#home-categories h2 {
     font-size: 1.25rem;
 }
 
@@ -49,9 +53,5 @@ footer {
     opacity: 25%;
     font-style: italic;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-bottom: 10px;
+    padding: 50px 0 25px 0;
 }

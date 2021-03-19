@@ -2,16 +2,10 @@
     height: 25%;
 }
 
-#low-runes {
-    border-left: 20px solid #745B9A;
-}
-
-#low-runes h2 {
-    color: #745B9A;
-}
-
-#low-runes .accordion-body {
-    color: #745B9A;
+#runes-list {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .accordion-flush .accordion-button {
@@ -30,6 +24,30 @@
 .accordion-button:not(.collapsed) {
     background-color: transparent;
     border-bottom: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+}
+
+.accordion-body {
+    font-family: exocet, serif;
+}
+
+.runes-item-type {
+    text-align: right;
+}
+
+#low-runes {
+    border-left: 20px solid #745B9A;
+}
+
+#low-runes h2 {
+    color: #745B9A;
+}
+
+#low-runes .accordion-body {
+    color: #745B9A;
 }
 
 #mid-runes {
@@ -56,7 +74,8 @@
     color: #ee5622;
 }
 
-.list-group-item {
-    background-color: transparent;
-    border-color: white;
+@media only screen and (max-width: 576px) {
+    .accordion-body {
+        font-size: .75rem;
+    }
 }

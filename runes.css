@@ -2,10 +2,6 @@
     height: 25%;
 }
 
-.list-group {
-    padding: 20px;
-}
-
 #low-runes {
     border-left: 20px solid #745B9A;
 }
@@ -14,7 +10,7 @@
     color: #745B9A;
 }
 
-#low-runes {
+#low-runes .accordion-body {
     color: #745B9A;
 }
 
@@ -31,6 +27,11 @@
     background-image: none;
 }
 
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    border-bottom: none;
+}
+
 #mid-runes {
     border-left: 20px solid #eca72c;
 }
@@ -39,11 +40,19 @@
     color: #eca72c;
 }
 
+#mid-runes .accordion-body {
+    color: #eca72c;
+}
+
 #high-runes {
     border-left: 20px solid #ee5622;
 }
 
 #high-runes h2 {
+    color: #ee5622;
+}
+
+#high-runes .accordion-body {
     color: #ee5622;
 }
 

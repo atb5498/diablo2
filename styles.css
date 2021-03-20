@@ -28,6 +28,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .hero-text {
@@ -54,4 +55,11 @@ footer {
     font-style: italic;
     text-align: center;
     padding: 50px 0 25px 0;
+}
+
+#home-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

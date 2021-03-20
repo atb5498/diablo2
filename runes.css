@@ -3,9 +3,13 @@
 }
 
 #runes-list {
-    max-width: 768px;
+    max-width: 576px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.rune {
+    font-size: 1.5rem;
 }
 
 .accordion-flush .accordion-button {
@@ -24,6 +28,8 @@
 .accordion-button:not(.collapsed) {
     background-color: transparent;
     border-bottom: none;
+    text-shadow: 0 0 5px white;
+    font-weight: bold;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -38,16 +44,21 @@
     text-align: right;
 }
 
+.runes-required-level {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
 #low-runes {
     border-left: 20px solid #745B9A;
 }
 
 #low-runes h2 {
-    color: #745B9A;
+    color: #9E8BBB;
 }
 
 #low-runes .accordion-body {
-    color: #745B9A;
+    color: #9E8BBB;
 }
 
 #mid-runes {

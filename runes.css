@@ -14,11 +14,16 @@
 
 .rune {
     font-size: 1.5rem;
+    padding-top: 5px;
 }
 
 .accordion-flush .accordion-button {
     color: white;
     border-top: 1px solid white;
+}
+
+.accordion-button {
+    padding: 5px 20px;
 }
 
 .accordion-button::after {

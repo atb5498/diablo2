@@ -8,22 +8,11 @@
     margin-left: auto;
 }
 
-.rune-img {
-    max-height: 50px;
-}
-
-.rune {
-    font-size: 1.5rem;
-    padding-top: 5px;
-}
-
 .accordion-flush .accordion-button {
     color: white;
     border-top: 1px solid white;
-}
-
-.accordion-button {
     padding: 5px 20px;
+    opacity: 50%;
 }
 
 .accordion-button::after {
@@ -37,8 +26,8 @@
 .accordion-button:not(.collapsed) {
     background-color: transparent;
     border-bottom: none;
+    opacity: 100%;
     text-shadow: 0 0 5px white;
-    font-weight: bold;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -49,17 +38,27 @@
     font-family: exocet, serif;
 }
 
-.runes-item-type {
+.rune-img {
+    max-height: 50px;
+}
+
+.rune {
+    font-size: 1.5rem;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.rune-item-type {
     text-align: right;
 }
 
-.runes-required-level {
+.rune-required-level {
     text-align: center;
     font-size: 1.25rem;
 }
 
 #low-runes {
-    border-left: 20px solid #745B9A;
+    border-left: 25px solid #745B9A;
 }
 
 #low-runes h2 {
@@ -71,7 +70,7 @@
 }
 
 #mid-runes {
-    border-left: 20px solid #eca72c;
+    border-left: 25px solid #eca72c;
 }
 
 #mid-runes h2 {
@@ -83,7 +82,7 @@
 }
 
 #high-runes {
-    border-left: 20px solid #ee5622;
+    border-left: 25px solid #ee5622;
 }
 
 #high-runes h2 {
@@ -97,5 +96,8 @@
 @media only screen and (max-width: 576px) {
     .accordion-body {
         font-size: .75rem;
+    }
+    .rune-required-level {
+        font-size: 1rem;
     }
 }

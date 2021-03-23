@@ -1,12 +1,12 @@
+html {
+    height: 100%;
+}
+
 body {
     background-color: #221E22;
     height: 100%;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-}
-
-html {
-    height: 100%;
 }
 
 h1, .navbar-brand {
@@ -28,7 +28,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .hero-text {

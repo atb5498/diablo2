@@ -20,235 +20,203 @@ let thulRuneBtn = document.getElementById("thul-rune-btn");
 let thulRuneImg = thulRuneBtn.children[0].children[0];
 let amnRuneBtn = document.getElementById("amn-rune-btn");
 let amnRuneImg = amnRuneBtn.children[0].children[0];
-let helRuneBtn = document.getElementById("hel-rune-btn");
-let helRuneImg = helRuneBtn.children[0].children[0];
 
 function elRuneGlow() {
     if (elRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
         elRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
 
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
     }
 }
 function eldRuneGlow() {
-    if (eldRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (eldRuneImg.getAttribute("src") === "assets/runes/eld-rune.png") {
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
     }
 }
 function tirRuneGlow() {
-    if (tirRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (tirRuneImg.getAttribute("src") === "assets/runes/tir-rune.png") {
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
     }
 }
 function nefRuneGlow() {
-    if (nefRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (nefRuneImg.getAttribute("src") === "assets/runes/nef-rune.png") {
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
     }
 }
 function ethRuneGlow() {
-    if (ethRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (ethRuneImg.getAttribute("src") === "assets/runes/eth-rune.png") {
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
     }
 }
 function ithRuneGlow() {
-    if (ithRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (ithRuneImg.getAttribute("src") === "assets/runes/ith-rune.png") {
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
     }
 }
 function talRuneGlow() {
-    if (talRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        talRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (talRuneImg.getAttribute("src") === "assets/runes/tal-rune.png") {
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
     }
 }
 function ralRuneGlow() {
-    if (ralRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (ralRuneImg.getAttribute("src") === "assets/runes/ral-rune.png") {
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
     }
 }
 function ortRuneGlow() {
-    if (ortRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (ortRuneImg.getAttribute("src") === "assets/runes/ort-rune.png") {
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
     }
 }
 function thulRuneGlow() {
-    if (thulRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (thulRuneImg.getAttribute("src") === "assets/runes/thul-rune.png") {
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     } else {
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
     }
 }
 function amnRuneGlow() {
-    if (amnRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
+    if (amnRuneImg.getAttribute("src") === "assets/runes/amn-rune.png") {
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune-glow.png");
 
         elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        eldRuneImg.setAttribute("src", "assets/runes/eld-rune.png");
+        tirRuneImg.setAttribute("src", "assets/runes/tir-rune.png");
+        nefRuneImg.setAttribute("src", "assets/runes/nef-rune.png");
+        ethRuneImg.setAttribute("src", "assets/runes/eth-rune.png");
+        ithRuneImg.setAttribute("src", "assets/runes/ith-rune.png");
+        talRuneImg.setAttribute("src", "assets/runes/tal-rune.png");
+        ralRuneImg.setAttribute("src", "assets/runes/ral-rune.png");
+        ortRuneImg.setAttribute("src", "assets/runes/ort-rune.png");
+        thulRuneImg.setAttribute("src", "assets/runes/thul-rune.png");
     } else {
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-    }
-}
-function helRuneGlow() {
-    if (helRuneImg.getAttribute("src") === "assets/runes/el-rune.png") {
-        helRuneImg.setAttribute("src", "assets/runes/el-rune-glow.png");
-
-        elRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        eldRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        tirRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        nefRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ethRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ithRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        talRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ralRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        ortRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        thulRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-        amnRuneImg.setAttribute("src", "assets/runes/el-rune.png");
-    } else {
-        helRuneImg.setAttribute("src", "assets/runes/el-rune.png");
+        amnRuneImg.setAttribute("src", "assets/runes/amn-rune.png");
     }
 }
 
@@ -263,4 +231,3 @@ ralRuneBtn.addEventListener("click", ralRuneGlow);
 ortRuneBtn.addEventListener("click", ortRuneGlow);
 thulRuneBtn.addEventListener("click", thulRuneGlow);
 amnRuneBtn.addEventListener("click", amnRuneGlow);
-helRuneBtn.addEventListener("click", helRuneGlow);

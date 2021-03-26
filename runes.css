@@ -48,6 +48,15 @@
     font-weight: bold;
 }
 
+.rune-recipe {
+    text-align: center;
+}
+
+.rune-recipe-img {
+    max-height: 37.5px;
+    opacity: 50%;
+}
+
 .rune-item-type {
     text-align: right;
 }

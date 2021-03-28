@@ -57,6 +57,10 @@
     opacity: 50%;
 }
 
+.rune-recipe-gem-img {
+    max-height: 37.5px;
+}
+
 .rune-item-type {
     text-align: right;
 }

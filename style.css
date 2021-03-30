@@ -9,16 +9,12 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-h1, .navbar-brand {
-    font-family: exocet, serif;
-}
-
-h2 {
-    font-weight: bold;
-}
-
 .navbar {
     background-color: #0B0A0B !important;
+}
+
+.navbar-brand, h1 {
+    font-family: exocet, serif;
 }
 
 .hero-image {
@@ -47,6 +43,7 @@ h2 {
 
 #home-categories h2 {
     font-size: 1.25rem;
+    font-weight: bold;
 }
 
 footer {

@@ -77,6 +77,7 @@
 
 #low-runes h2 {
     color: #9E8BBB;
+    font-family: exocet, serif;
 }
 
 #low-runes .accordion-body {
@@ -89,6 +90,7 @@
 
 #mid-runes h2 {
     color: #eca72c;
+    font-family: exocet, serif;
 }
 
 #mid-runes .accordion-body {
@@ -101,6 +103,7 @@
 
 #high-runes h2 {
     color: #ee5622;
+    font-family: exocet, serif;
 }
 
 #high-runes .accordion-body {

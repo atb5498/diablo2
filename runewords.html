@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2 Wanderer</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <!--Adobe Fonts-->
+    <link rel="stylesheet" href=https://use.typekit.net/hmm0yrb.css>
+
+    <!--Goolgle Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="runewords.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">D2W</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="runes.html">Runes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Runewords</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Elite Bases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cube Recipes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Hero-->
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Runewords</h1>
+            <p>Discover which Runewords you can make with the runes in your collection.</p>
+        </div>
+    </div>
+
+    <!--Content-->
+    <div class="container">
+        <h2>Select Your Runes</h2>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label id="el-rune-btn" class="btn btn-outline-secondary rune" for="btncheck1">
+                        <img src="assets/runes/el-rune.png" alt="Diablo 2 El Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label id="eld-rune-btn" class="btn btn-outline-secondary rune" for="btncheck2">
+                        <img src="assets/runes/eld-rune.png" alt="Diablo 2 Eld Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                    <label id="tir-rune-btn" class="btn btn-outline-secondary rune" for="btncheck3">
+                        <img src="assets/runes/tir-rune.png" alt="Diablo 2 Tir Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                    <label id="nef-rune-btn" class="btn btn-outline-secondary rune" for="btncheck4">
+                        <img src="assets/runes/nef-rune.png" alt="Diablo 2 Nef Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                    <label id="eth-rune-btn" class="btn btn-outline-secondary rune" for="btncheck5">
+                        <img src="assets/runes/eth-rune.png" alt="Diablo 2 Eth Rune">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+                    <label id="ith-rune-btn" class="btn btn-outline-secondary rune" for="btncheck6">
+                        <img src="assets/runes/ith-rune.png" alt="Diablo 2 Ith Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
+                    <label id="tal-rune-btn" class="btn btn-outline-secondary rune" for="btncheck7">
+                        <img src="assets/runes/tal-rune.png" alt="Diablo 2 Tal Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off">
+                    <label id="ral-rune-btn" class="btn btn-outline-secondary rune" for="btncheck8">
+                        <img src="assets/runes/ral-rune.png" alt="Diablo 2 Ral Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off">
+                    <label id="ort-rune-btn" class="btn btn-outline-secondary rune" for="btncheck9">
+                        <img src="assets/runes/ort-rune.png" alt="Diablo 2 Ort Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off">
+                    <label id="thul-rune-btn" class="btn btn-outline-secondary rune" for="btncheck10">
+                        <img src="assets/runes/thul-rune.png" alt="Diablo 2 Thul Rune">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck11" autocomplete="off">
+                    <label id="amn-rune-btn" class="btn btn-outline-secondary rune" for="btncheck11">
+                        <img src="assets/runes/amn-rune.png" alt="Diablo 2 Amn Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck12" autocomplete="off">
+                    <label id="sol-rune-btn" class="btn btn-outline-secondary rune" for="btncheck12">
+                        <img src="assets/runes/sol-rune.png" alt="Diablo 2 Sol Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck13" autocomplete="off">
+                    <label id="shael-rune-btn" class="btn btn-outline-secondary rune" for="btncheck13">
+                        <img src="assets/runes/shael-rune.png" alt="Diablo 2 Shael Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck14" autocomplete="off">
+                    <label id="dol-rune-btn" class="btn btn-outline-secondary rune" for="btncheck14">
+                        <img src="assets/runes/dol-rune.png" alt="Diablo 2 Dol Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck15" autocomplete="off">
+                    <label id="hel-rune-btn" class="btn btn-outline-secondary rune" for="btncheck15">
+                        <img src="assets/runes/hel-rune.png" alt="Diablo 2 Hel Rune">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck16" autocomplete="off">
+                    <label id="io-rune-btn" class="btn btn-outline-secondary rune" for="btncheck16">
+                        <img src="assets/runes/io-rune.png" alt="Diablo 2 Io Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck17" autocomplete="off">
+                    <label id="lum-rune-btn" class="btn btn-outline-secondary rune" for="btncheck17">
+                        <img src="assets/runes/lum-rune.png" alt="Diablo 2 Lum Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck18" autocomplete="off">
+                    <label id="ko-rune-btn" class="btn btn-outline-secondary rune" for="btncheck18">
+                        <img src="assets/runes/ko-rune.png" alt="Diablo 2 Ko Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck19" autocomplete="off">
+                    <label id="fal-rune-btn" class="btn btn-outline-secondary rune" for="btncheck19">
+                        <img src="assets/runes/fal-rune.png" alt="Diablo 2 Fal Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck20" autocomplete="off">
+                    <label id="lem-rune-btn" class="btn btn-outline-secondary rune" for="btncheck20">
+                        <img src="assets/runes/lem-rune.png" alt="Diablo 2 Lem Rune">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck21" autocomplete="off">
+                    <label id="pul-rune-btn" class="btn btn-outline-secondary rune" for="btncheck21">
+                        <img src="assets/runes/pul-rune.png" alt="Diablo 2 Pul Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck22" autocomplete="off">
+                    <label id="um-rune-btn" class="btn btn-outline-secondary rune" for="btncheck22">
+                        <img src="assets/runes/um-rune.png" alt="Diablo 2 Um Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck23" autocomplete="off">
+                    <label id="mal-rune-btn" class="btn btn-outline-secondary rune" for="btncheck23">
+                        <img src="assets/runes/mal-rune.png" alt="Diablo 2 Mal Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck24" autocomplete="off">
+                    <label id="ist-rune-btn" class="btn btn-outline-secondary rune" for="btncheck24">
+                        <img src="assets/runes/ist-rune.png" alt="Diablo 2 Ist Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck25" autocomplete="off">
+                    <label id="gul-rune-btn" class="btn btn-outline-secondary rune" for="btncheck25">
+                        <img src="assets/runes/gul-rune.png" alt="Diablo 2 Gul Rune">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck26" autocomplete="off">
+                    <label id="vex-rune-btn" class="btn btn-outline-secondary rune" for="btncheck26">
+                        <img src="assets/runes/vex-rune.png" alt="Diablo 2 Vex Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck27" autocomplete="off">
+                    <label id="ohm-rune-btn" class="btn btn-outline-secondary rune" for="btncheck27">
+                        <img src="assets/runes/ohm-rune.png" alt="Diablo 2 Ohm Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck28" autocomplete="off">
+                    <label id="lo-rune-btn" class="btn btn-outline-secondary rune" for="btncheck28">
+                        <img src="assets/runes/lo-rune.png" alt="Diablo 2 Lo Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck29" autocomplete="off">
+                    <label id="sur-rune-btn" class="btn btn-outline-secondary rune" for="btncheck29">
+                        <img src="assets/runes/sur-rune.png" alt="Diablo 2 Sur Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck30" autocomplete="off">
+                    <label id="ber-rune-btn" class="btn btn-outline-secondary rune" for="btncheck30">
+                        <img src="assets/runes/ber-rune.png" alt="Diablo 2 Ber Rune">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck31" autocomplete="off">
+                    <label id="jah-rune-btn" class="btn btn-outline-secondary rune" for="btncheck31">
+                        <img src="assets/runes/jah-rune.png" alt="Diablo 2 Jah Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck32" autocomplete="off">
+                    <label id="cham-rune-btn" class="btn btn-outline-secondary rune" for="btncheck32">
+                        <img src="assets/runes/cham-rune.png" alt="Diablo 2 Cham Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck33" autocomplete="off">
+                    <label id="zod-rune-btn" class="btn btn-outline-secondary rune" for="btncheck33">
+                        <img src="assets/runes/zod-rune.png" alt="Diablo 2 Zod Rune">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>"Not even death can save you from me."</footer>
+
+    <script src="runewords.js"></script>
+</body>
+
+</html>

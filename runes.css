@@ -27,7 +27,7 @@
     background-color: transparent;
     border-bottom: none;
     opacity: 100%;
-    text-shadow: 0 0 5px white;
+    /* text-shadow: 0 0 5px white; */
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -39,7 +39,7 @@
 }
 
 .rune-img {
-    max-height: 50px;
+    width: 60px;
 }
 
 .rune {
@@ -54,12 +54,12 @@
 }
 
 .rune-recipe-img {
-    max-height: 37.5px;
+    width: 40px;
     opacity: 50%;
 }
 
 .rune-recipe-gem-img {
-    max-height: 37.5px;
+    width: 40px;
 }
 
 .rune-item-type {

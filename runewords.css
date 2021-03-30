@@ -1,0 +1,19 @@
+.hero-image {
+    height: 25%;
+}
+
+.rune {
+    padding: 5px;
+}
+
+.btn img {
+    width: 40px;
+}
+
+.btn-group>.btn:not(.dropdown-toggle) img {
+    opacity: 50%;
+}
+
+.btn-check:checked+.btn-outline-primary {
+    opacity: 100%;
+}

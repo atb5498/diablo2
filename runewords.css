@@ -55,20 +55,43 @@ h2 {
     font-family: exocet, serif;
 }
 
-.sidenav {
+.overlay3 {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.offcanvas {
+    height: 100%;
+    width: 0;
     top: 0;
     left: 0;
     background-color: #111;
+    position: fixed;
+    z-index: 3;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: .5s;
     padding-top: 60px;
 }
 
-.sidenav a {
+.offcanvas .closeOffcanvas {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.offcanvas a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -77,28 +100,22 @@ h2 {
     transition: 0.3s;
 }
 
-.sidenav a:hover {
+.offcanvas a:hover {
     color: #f1f1f1;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.offCanvasWidth {
+    width: 50%;
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
+@media only screen and (max-width: 992px) {
+    .offCanvasWidth {
+        width: 75%;
     }
-    .sidenav a {
-        font-size: 18px;
+}
+
+@media only screen and (max-width: 576px) {
+    .offCanvasWidth {
+        width: 100%;
     }
 }

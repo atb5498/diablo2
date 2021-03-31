@@ -59,12 +59,12 @@
     <div class="hero-image">
         <div class="hero-text">
             <h1>Runewords</h1>
-            <p>Discover which Runewords you can make with the runes in your collection.</p>
+            <p>Discover which Runewords you can make with your collection.</p>
         </div>
     </div>
 
     <!--Content-->
-    <div class="container">
+    <div id="runes" class="container">
         <h2>Select Your Runes</h2>
         <div class="row">
             <div class="col">
@@ -250,25 +250,57 @@
             <div class="col">
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
                     <input type="checkbox" class="btn-check" id="btncheck31" autocomplete="off">
-                    <label id="jah-rune-btn" class="btn btn-outline-secondary rune" for="btncheck31">
-                        <img src="assets/runes/jah-rune.png" alt="Diablo 2 Jah Rune">
+                    <label class="btn btn-outline-secondary rune" for="btncheck31">
+                        <div id="clear">x</div>
                     </label>
 
                     <input type="checkbox" class="btn-check" id="btncheck32" autocomplete="off">
-                    <label id="cham-rune-btn" class="btn btn-outline-secondary rune" for="btncheck32">
-                        <img src="assets/runes/cham-rune.png" alt="Diablo 2 Cham Rune">
+                    <label id="jah-rune-btn" class="btn btn-outline-secondary rune" for="btncheck32">
+                        <img src="assets/runes/jah-rune.png" alt="Diablo 2 Jah Rune">
                     </label>
 
                     <input type="checkbox" class="btn-check" id="btncheck33" autocomplete="off">
-                    <label id="zod-rune-btn" class="btn btn-outline-secondary rune" for="btncheck33">
+                    <label id="cham-rune-btn" class="btn btn-outline-secondary rune" for="btncheck33">
+                        <img src="assets/runes/cham-rune.png" alt="Diablo 2 Cham Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck34" autocomplete="off">
+                    <label id="zod-rune-btn" class="btn btn-outline-secondary rune" for="btncheck34">
                         <img src="assets/runes/zod-rune.png" alt="Diablo 2 Zod Rune">
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck35" autocomplete="off">
+                    <label class="btn btn-outline-secondary rune" for="btncheck35">
+                        <div id="select-all">ALL</div>
                     </label>
                 </div>
             </div>
         </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        </div>
     </div>
 
-    <footer>"Not even death can save you from me."</footer>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
 
     <script src="runewords.js"></script>
 </body>

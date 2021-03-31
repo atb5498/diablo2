@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    margin-bottom: 50px;
 }
 
 body {
@@ -44,12 +45,4 @@ body {
 #home-categories h2 {
     font-size: 1.25rem;
     font-weight: bold;
-}
-
-footer {
-    font-size: .75rem;
-    opacity: 25%;
-    font-style: italic;
-    text-align: center;
-    padding: 50px 0 25px 0;
 }

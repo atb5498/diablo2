@@ -2,18 +2,103 @@
     height: 25%;
 }
 
+h2 {
+    font-weight: bold;
+}
+
+#runes {
+    text-align: center;
+}
+
 .rune {
     padding: 5px;
 }
 
+.btn-outline-secondary {
+    border-radius: 0;
+}
+
 .btn img {
-    width: 40px;
+    height: 45px;
+}
+
+.btn-group>.btn:not(:first-child) {
+    margin-top: -1px;
 }
 
 .btn-group>.btn:not(.dropdown-toggle) img {
     opacity: 50%;
 }
 
-.btn-check:checked+.btn-outline-primary {
+.btn-check:checked+.btn-outline-secondary img {
     opacity: 100%;
+}
+
+.btn-check:checked+.btn-outline-secondary {
+    background-color: transparent;
+    border-color: white;
+    box-shadow: 0 0 5px white;
+}
+
+#clear {
+    height: 45px;
+    line-height: 45px;
+    width: 46.73px;
+    font-family: exocet, serif;
+    font-size: 1.5rem;
+}
+
+#select-all {
+    height: 45px;
+    line-height: 45px;
+    width: 46.73px;
+    font-family: exocet, serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }

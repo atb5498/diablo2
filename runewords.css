@@ -105,22 +105,28 @@
 }
 
 .offCanvasWidth {
-    width: 50%;
+    width: 33.33%;
 }
 
-#runes-btns {
+#runewords-btns {
     width: 290.67px;
     margin-top: 25px;
     margin-right: auto;
     margin-left: auto;
 }
 
-#runes-btns .col button {
+#runewords-btns .col button {
     width: 100%;
     font-family: exocet, serif;
 }
 
 @media only screen and (max-width: 992px) {
+    .offCanvasWidth {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
     .offCanvasWidth {
         width: 75%;
     }

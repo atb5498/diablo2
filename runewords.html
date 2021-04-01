@@ -59,13 +59,14 @@
     <div class="hero-image">
         <div class="hero-text">
             <h1>Runewords</h1>
-            <p>Discover which Runewords you can make with your collection.</p>
+            <p>Select your Runes to discover each Runeword possibility.</p>
+            <!-- <p>Discover which Runewords you can make with your collection of runes.</p> -->
         </div>
     </div>
 
     <!--Content-->
     <div id="runes" class="container">
-        <h2>Select Your Runes</h2>
+        <!-- <h2>Select Your Runes:</h2> -->
         <div class="row">
             <div class="col">
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -251,7 +252,7 @@
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
                     <input type="checkbox" class="btn-check" id="btncheck31" autocomplete="off">
                     <label class="btn btn-outline-secondary rune" for="btncheck31">
-                        <div id="clear">x</div>
+                        <div id="clear-btn">x</div>
                     </label>
 
                     <input type="checkbox" class="btn-check" id="btncheck32" autocomplete="off">
@@ -271,7 +272,7 @@
 
                     <input type="checkbox" class="btn-check" id="btncheck35" autocomplete="off">
                     <label class="btn btn-outline-secondary rune" for="btncheck35">
-                        <div id="select-all">ALL</div>
+                        <div id="select-all-btn">ALL</div>
                     </label>
                 </div>
             </div>
@@ -282,15 +283,20 @@
         <div id="myOffcanvas" class="offcanvas">
             <a href="javascript:void(0)" class="closeOffcanvas" onclick="closeOffcanvas()">×</a>
             <a href="javascript:void(0)">About</a>
-            <a href="javascript:void(0)">Services</a>
-            <a href="javascript:void(0)">Clients</a>
-            <a href="javascript:void(0)">Contact</a>
         </div>
 
-        <button class="w3-btn w3-dark-grey w3-padding w3-margin-bottom" onclick="openNav3();openOffcanvas()">Off-Canvas
-            Menu w/opacity</button>
+        <div id="runes-btns" class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-light">SAVE</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light" onclick="openNav3();openOffcanvas()">SEARCH</button>
+            </div>
+        </div>
+    </div>
 
-        <script src="runewords.js"></script>
+    <script src="runewords.js"></script>
+
 </body>
 
 </html>

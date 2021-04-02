@@ -40,7 +40,7 @@ function removeAllRunes(array, elem) {
     }
 }
 
-function findRunewords() {
+function searchRunewords() {
     runeBtnChecks.forEach(function (runeBtnCheck) {
         if (runeBtnCheck.checked === true) {
             selectedRunes.push(runeBtnCheck.value);
@@ -48,14 +48,18 @@ function findRunewords() {
             removeAllRunes(selectedRunes, runeBtnCheck.value)
         }
     })
+
     let selectedRunesNoDupes = selectedRunes.filter(function (selectedRune, index) {
         return selectedRunes.indexOf(selectedRune) === index;
     })
     console.log(selectedRunesNoDupes)
-}
 
-// if (runeword.runes.includes(runeBtnCheck.value)) {
-//     console.log(runeword.name)
-// } else {
-//     console.log("NO RUNEWORD FOUND")
-// }
+    selectedRunesNoDupes.forEach(function (selectedRuneNoDupe) {
+        runewords.runes.every(function (rune) {
+            if (selectedRuneNoDupe.includes(rune)) {
+                console.log(runewords.name)
+            }
+        });
+
+    })
+}

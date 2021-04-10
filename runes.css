@@ -50,12 +50,16 @@
 
 .rune-recipe {
     text-align: center;
-    font-size: 1rem;
 }
 
 .rune-recipe-img {
     width: 40px;
     opacity: 50%;
+}
+
+.topaz {
+    font-weight: bold;
+    color: yellow;
 }
 
 .rune-recipe-gem-img {

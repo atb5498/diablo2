@@ -12,13 +12,14 @@ function closeOffcanvas() {
     document.getElementById("myCanvasNav").style.opacity = "0";
 }
 
+/*Runewords List*/
 let runeBtnChecks = document.querySelectorAll(".rune-btn-check");
 let runewordsList = document.getElementById("runewords-list");
 let selectedRunes = [];
 let runewords = [
     {
         name: "Breath of the Dying",
-        bases: "6 Socket Weapons",
+        bases: "Weapons",
         runes: ["Vex", "Hel", "El", "Eld", "Zod", "Eth"],
         level: 69,
         stats: [
@@ -41,7 +42,7 @@ let runewords = [
     },
     {
         name: "Pride",
-        bases: "4 Socket Polearms",
+        bases: "Polearms",
         runes: ["Cham", "Sur", "Io", "Lo"],
         level: 67,
         stats: [
@@ -61,7 +62,7 @@ let runewords = [
     },
     {
         name: "Hand of Justice",
-        bases: "4 Socket Weapons",
+        bases: "Weapons",
         runes: ["Sur", "Cham", "Amn", "Lo"],
         level: 67,
         stats: [
@@ -81,7 +82,7 @@ let runewords = [
     },
     {
         name: "Doom",
-        bases: "5 Socket Axes/Polearms/Hammers",
+        bases: "Axes/Polearms/Hammers",
         runes: ["Hel", "Ohm", "Um", "Lo", "Cham"],
         level: 67,
         stats: [
@@ -101,7 +102,7 @@ let runewords = [
     },
     {
         name: "Last Wish",
-        bases: "6 Socket Swords/Hammers/Axes",
+        bases: "Swords/Hammers/Axes",
         runes: ["Jah", "Mal", "Jah", "Sur", "Jah", "Ber"],
         level: 65,
         stats: [
@@ -120,7 +121,7 @@ let runewords = [
     },
     {
         name: "Destruction",
-        bases: "5 Socket Polearms/Swords",
+        bases: "Polearms/Swords",
         runes: ["Vex", "Lo", "Ber", "Jah", "Ko"],
         level: 65,
         stats: [
@@ -141,7 +142,7 @@ let runewords = [
     },
     {
         name: "Enigma",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Jah", "Ith", "Ber"],
         level: 65,
         stats: [
@@ -160,40 +161,29 @@ let runewords = [
     },
     {
         name: "Phoenix",
-        bases: "4 Socket Weapons/Shields",
+        bases: "Weapons/Shields",
         runes: ["Vex", "Vex", "Lo", "Jah"],
         level: 65,
-        stats: {
-            weapons: [
-                "100% Chance To Cast level 40 Blaze When You Level-up",
-                "40% Chance To Cast Level 22 Firestorm On Striking",
-                "Level 10-15 Redemption Aura When Equipped",
-                "+350-400% Enhanced Damage",
-                "Ignores Target's Defense",
-                "14% Mana Stolen Per Hit",
-                "-28% To Enemy Fire Resistance",
-                "20% Deadly Strike",
-                "+350-400 Defense Vs. Missile",
-                "+15-21 Fire Absorb"
-            ],
-            shields: [
-                "100% Chance To Cast level 40 Blaze When You Level-up",
-                "40% Chance To Cast Level 22 Firestorm On Striking",
-                "Level 10-15 Redemption Aura When Equipped",
-                "+350-400% Enhanced Damage",
-                "-28% To Enemy Fire Resistance",
-                "+350-400 Defense Vs. Missile",
-                "+50 To Life",
-                "+5% To Maximum Lightning Resist",
-                "+10% To Maximum Fire Resist",
-                "+15-21 Fire Absorb"
-            ]
-        },
+        stats: [
+            "100% Chance To Cast level 40 Blaze When You Level-up",
+            "40% Chance To Cast Level 22 Firestorm On Striking",
+            "Level 10-15 Redemption Aura When Equipped",
+            "+350-400% Enhanced Damage",
+            "-28% To Enemy Fire Resistance",
+            "+350-400 Defense Vs. Missile",
+            "+15-21 Fire Absorb",
+            "Ignores Target's Defense (Weapons Only)",
+            "14% Mana Stolen Per Hit (Weapons Only)",
+            "20% Deadly Strike (Weapons Only)",
+            "+50 To Life (Shields Only)",
+            "+5% To Maximum Lightning Resist (Shields Only)",
+            "+10% To Maximum Fire Resist (Shields Only)",
+        ],
         ladder: true
     },
     {
         name: "Brand",
-        bases: "4 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Jah", "Lo", "Mal", "Gul"],
         level: 65,
         stats: [
@@ -212,7 +202,7 @@ let runewords = [
     },
     {
         name: "Faith",
-        bases: "4 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Ohm", "Jah", "Lem", "Eld"],
         level: 65,
         stats: [
@@ -232,7 +222,7 @@ let runewords = [
     },
     {
         name: "Famine",
-        bases: "4 Socket Axes/Hammers",
+        bases: "Axes/Hammers",
         runes: ["Fal", "Ohm", "Ort", "Jah"],
         level: 65,
         stats: [
@@ -251,7 +241,7 @@ let runewords = [
     },
     {
         name: "Fury",
-        bases: "3 Socket Melee Weapons",
+        bases: "Melee Weapons",
         runes: ["Jah", "Gul", "Eth"],
         level: 65,
         stats: [
@@ -270,7 +260,7 @@ let runewords = [
     },
     {
         name: "Dream",
-        bases: "3 Socket Helms/Shields",
+        bases: "Helms/Shields",
         runes: ["Io", "Jah", "Pul"],
         level: 65,
         stats: [
@@ -290,7 +280,7 @@ let runewords = [
     },
     {
         name: "Ice",
-        bases: "4 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Amn", "Shael", "Jah", "Lo"],
         level: 65,
         stats: [
@@ -310,7 +300,7 @@ let runewords = [
     },
     {
         name: "Eternity",
-        bases: "5 Socket Melee Weapons",
+        bases: "Melee Weapons",
         runes: ["Amn", "Ber", "Ist", "Sol", "Sur"],
         level: 63,
         stats: [
@@ -331,7 +321,7 @@ let runewords = [
     },
     {
         name: "Infinity",
-        bases: "4 Socket Polearms",
+        bases: "Polearms",
         runes: ["Ber", "Mal", "Ber", "Ist"],
         level: 63,
         stats: [
@@ -350,7 +340,7 @@ let runewords = [
     },
     {
         name: "Chains of Honor",
-        bases: "4 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Dol", "Um", "Ber", "Ist"],
         level: 63,
         stats: [
@@ -369,7 +359,7 @@ let runewords = [
     },
     {
         name: "Beast",
-        bases: "5 Socket Axes/Scepters/Hammers",
+        bases: "Axes/Scepters/Hammers",
         runes: ["Ber", "Tir", "Um", "Mal", "Lum"],
         level: 63,
         stats: [
@@ -390,7 +380,7 @@ let runewords = [
     },
     {
         name: "Wrath",
-        bases: "4 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Pul", "Lum", "Ber", "Mal"],
         level: 63,
         stats: [
@@ -410,7 +400,7 @@ let runewords = [
     },
     {
         name: "Dragon",
-        bases: "3 Socket Body Armor/Shields",
+        bases: "Body Armor/Shields",
         runes: ["Sur", "Lo", "Sol"],
         level: 61,
         stats: [
@@ -430,7 +420,7 @@ let runewords = [
     },
     {
         name: "Bramble",
-        bases: "4 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Ral", "Ohm", "Sur", "Eth"],
         level: 61,
         stats: [
@@ -450,7 +440,7 @@ let runewords = [
     },
     {
         name: "Wind",
-        bases: "2 Socket Melee Weapons",
+        bases: "Melee Weapons",
         runes: ["Sur", "El"],
         level: 61,
         stats: [
@@ -469,7 +459,7 @@ let runewords = [
     },
     {
         name: "Grief",
-        bases: "5 Socket Swords/Axes",
+        bases: "Swords/Axes",
         runes: ["Eth", "Tir", "Lo", "Mal", "Ral"],
         level: 59,
         stats: [
@@ -490,44 +480,32 @@ let runewords = [
     },
     {
         name: "Fortitude",
-        bases: "4 Socket Weapons/Body Armor",
+        bases: "Weapons/Body Armor",
         runes: ["El", "Sol", "Dol", "Lo"],
         level: 59,
-        stats: {
-            weapons: [
-                "20% Chance To Cast Level 15 Chilling Armor when Struck",
-                "+25% Faster Cast Rate",
-                "+300% Enhanced Damage",
-                "+9 To Minimum Damage",
-                "+50 To Attack Rating",
-                "20% Deadly Strike",
-                "Hit Causes Monster To Flee 25%",
-                "+200% Enhanced Defense",
-                "+X To Life (Based on Character Level)",
-                "All Resistances +25-30",
-                "12% Damage Taken Goes To Mana",
-                "+1 To Light Radius"
-            ],
-            bodyArmor: [
-                "20% Chance To Cast Level 15 Chilling Armor when Struck",
-                "+25% Faster Cast Rate",
-                "+300% Enhanced Damage",
-                "+200% Enhanced Defense",
-                "+15 Defense",
-                "+X To Life (Based on Character Level)",
-                "Replenish Life +7",
-                "+5% To Maximum Lightning Resist",
-                "All Resistances +25-30",
-                "Damage Reduced By 7",
-                "12% Damage Taken Goes To Mana",
-                "+1 To Light Radius"
-            ]
-        },
+        stats: [
+            "20% Chance To Cast Level 15 Chilling Armor when Struck",
+            "+25% Faster Cast Rate",
+            "+300% Enhanced Damage",
+            "+200% Enhanced Defense",
+            "+X To Life (Based on Character Level)",
+            "All Resistances +25-30",
+            "12% Damage Taken Goes To Mana",
+            "+1 To Light Radius",
+            "+9 To Minimum Damage (Weapons Only)",
+            "+50 To Attack Rating (Weapons Only)",
+            "20% Deadly Strike (Weapons Only)",
+            "Hit Causes Monster To Flee 25% (Weapons Only)",
+            "+15 Defense (Body Armor Only)",
+            "Replenish Life +7 (Body Armor Only)",
+            "+5% To Maximum Lightning Resist (Body Armor Only)",
+            "Damage Reduced By 7 (Body Armor Only)"
+        ],
         ladder: true
     },
     {
         name: "Oath",
-        bases: "4 Socket Swords/Axes/Maces",
+        bases: "Swords/Axes/Maces",
         runes: ["Shael", "Pul", "Mal", "Lum"],
         level: 59,
         stats: [
@@ -547,7 +525,7 @@ let runewords = [
     },
     {
         name: "Exile",
-        bases: "4 Socket Paladin Shields",
+        bases: "Paladin Shields",
         runes: ["Vex", "Ohm", "Ist", "Dol"],
         level: 57,
         stats: [
@@ -567,7 +545,7 @@ let runewords = [
     },
     {
         name: "Call To Arms",
-        bases: "4 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Dol", "Um", "Ber", "Ist"],
         level: 57,
         stats: [
@@ -587,7 +565,7 @@ let runewords = [
     },
     {
         name: "Chaos",
-        bases: "3 Socket Claws",
+        bases: "Claws",
         runes: ["Fal", "Ohm", "Um"],
         level: 57,
         stats: [
@@ -605,7 +583,7 @@ let runewords = [
     },
     {
         name: "Death",
-        bases: "5 Socket Swords/Axes",
+        bases: "Swords/Axes",
         runes: ["Hel", "El", "Vex", "Ort", "Gul"],
         level: 55,
         stats: [
@@ -627,7 +605,7 @@ let runewords = [
     },
     {
         name: "Silence",
-        bases: "6 Socket Weapons",
+        bases: "Weapons",
         runes: ["Dol", "Eld", "Hel", "Ist", "Tir", "Vex"],
         level: 55,
         stats: [
@@ -649,7 +627,7 @@ let runewords = [
     },
     {
         name: "Heart of the Oak",
-        bases: "4 Socket Staves/Maces",
+        bases: "Staves/Maces",
         runes: ["Ko", "Vex", "Pul", "Thul"],
         level: 55,
         stats: [
@@ -670,7 +648,7 @@ let runewords = [
     },
     {
         name: "Principle",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Ral", "Gul", "Eld"],
         level: 55,
         stats: [
@@ -686,7 +664,7 @@ let runewords = [
     },
     {
         name: "Kingslayer",
-        bases: "4 Socket Swords/Axes",
+        bases: "Swords/Axes",
         runes: ["Mal", "Um", "Gul", "Fal"],
         level: 53,
         stats: [
@@ -705,7 +683,7 @@ let runewords = [
     },
     {
         name: "Rift",
-        bases: "4 Socket Polearms/Scepters",
+        bases: "Polearms/Scepters",
         runes: ["Hel", "Ko", "Lem", "Gul"],
         level: 53,
         stats: [
@@ -725,7 +703,7 @@ let runewords = [
     },
     {
         name: "Delirium",
-        bases: "3 Socket Helms",
+        bases: "Helms",
         runes: ["Lem", "Ist", "Io"],
         level: 51,
         stats: [
@@ -744,7 +722,7 @@ let runewords = [
     },
     {
         name: "Sanctuary",
-        bases: "3 Socket Shields",
+        bases: "Shields",
         runes: ["Ko", "Ko", "Mal"],
         level: 49,
         stats: [
@@ -762,7 +740,7 @@ let runewords = [
     },
     {
         name: "Venom",
-        bases: "3 Socket Weapons",
+        bases: "Weapons",
         runes: ["Tal", "Dol", "Mal"],
         level: 49,
         stats: [
@@ -778,7 +756,7 @@ let runewords = [
     },
     {
         name: "Rain",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Ort", "Mal", "Ith"],
         level: 49,
         stats: [
@@ -794,7 +772,7 @@ let runewords = [
     },
     {
         name: "Prudence",
-        bases: "2 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Mal", "Tir"],
         level: 49,
         stats: [
@@ -811,7 +789,7 @@ let runewords = [
     },
     {
         name: "Bone",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Sol", "Um", "Um"],
         level: 47,
         stats: [
@@ -826,7 +804,7 @@ let runewords = [
     },
     {
         name: "Gloom",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Fal", "Um", "Pul"],
         level: 47,
         stats: [
@@ -843,7 +821,7 @@ let runewords = [
     },
     {
         name: "Stone",
-        bases: "4 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Shael", "Um", "Pul", "Lum"],
         level: 47,
         stats: [
@@ -861,7 +839,7 @@ let runewords = [
     },
     {
         name: "Duress",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Shael", "Um", "Thul"],
         level: 47,
         stats: [
@@ -881,7 +859,7 @@ let runewords = [
     },
     {
         name: "Crescent Moon",
-        bases: "3 Socket Axes/Swords/Polearms",
+        bases: "Axes/Swords/Polearms",
         runes: ["Shael", "Um", "Tir"],
         level: 47,
         stats: [
@@ -900,7 +878,7 @@ let runewords = [
     },
     {
         name: "Enlightenment",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Pul", "Ral", "Sol"],
         level: 45,
         stats: [
@@ -916,7 +894,7 @@ let runewords = [
     },
     {
         name: "Lawbringer",
-        bases: "3 Socket Swords/Hammers/Scepters",
+        bases: "Swords/Hammers/Scepters",
         runes: ["Amn", "Lem", "Ko"],
         level: 43,
         stats: [
@@ -935,7 +913,7 @@ let runewords = [
     },
     {
         name: "Wealth",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Lem", "Ko", "Tir"],
         level: 43,
         stats: [
@@ -948,7 +926,7 @@ let runewords = [
     },
     {
         name: "Voice of Reason",
-        bases: "4 Socket Swords/Maces",
+        bases: "Swords/Maces",
         runes: ["Lem", "Ko", "El", "Eld"],
         level: 43,
         stats: [
@@ -969,7 +947,7 @@ let runewords = [
     },
     {
         name: "Passion",
-        bases: "4 Socket Weapons",
+        bases: "Weapons",
         runes: ["Dol", "Ort", "Eld", "Lem"],
         level: 43,
         stats: [
@@ -990,7 +968,7 @@ let runewords = [
     },
     {
         name: "Treachery",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Shael", "Thul", "Lem"],
         level: 43,
         stats: [
@@ -1006,7 +984,7 @@ let runewords = [
     },
     {
         name: "Obedience",
-        bases: "5 Socket Polearms",
+        bases: "Polearms",
         runes: ["Hel", "Ko", "Thul", "Eth", "Fal"],
         level: 41,
         stats: [
@@ -1027,7 +1005,7 @@ let runewords = [
     },
     {
         name: "Lionheart",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Hel", "Lum", "Fal"],
         level: 41,
         stats: [
@@ -1044,7 +1022,7 @@ let runewords = [
     },
     {
         name: "Melody",
-        bases: "3 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Shael", "Ko", "Nef"],
         level: 39,
         stats: [
@@ -1062,7 +1040,7 @@ let runewords = [
     },
     {
         name: "Harmony",
-        bases: "4 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Tir", "Ith", "Sol", "Ko"],
         level: 39,
         stats: [
@@ -1084,7 +1062,7 @@ let runewords = [
     },
     {
         name: "Memory",
-        bases: "4 Socket Staves",
+        bases: "Staves",
         runes: ["Lum", "Io", "Sol", "Eth"],
         level: 37,
         stats: [
@@ -1104,7 +1082,7 @@ let runewords = [
     },
     {
         name: "Splendor",
-        bases: "2 Socket Shields",
+        bases: "Shields",
         runes: ["Eth", "Lum"],
         level: 37,
         stats: [
@@ -1122,7 +1100,7 @@ let runewords = [
     },
     {
         name: "Smoke",
-        bases: "2 Socket Shields",
+        bases: "Shields",
         runes: ["Nef", "Lum"],
         level: 37,
         stats: [
@@ -1138,7 +1116,7 @@ let runewords = [
     },
     {
         name: "White",
-        bases: "2 Socket Wand",
+        bases: "Wand",
         runes: ["Dol", "Io"],
         level: 35,
         stats: [
@@ -1156,7 +1134,7 @@ let runewords = [
     },
     {
         name: "Black",
-        bases: "3 Socket Clubs/Hammers/Maces",
+        bases: "Clubs/Hammers/Maces",
         runes: ["Thul", "Io", "Nef"],
         level: 35,
         stats: [
@@ -1174,7 +1152,7 @@ let runewords = [
     },
     {
         name: "Peace",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Shael", "Thul", "Amn"],
         level: 29,
         stats: [
@@ -1190,7 +1168,7 @@ let runewords = [
     },
     {
         name: "Rhyme",
-        bases: "2 Socket Shields",
+        bases: "Shields",
         runes: ["Shael", "Eth"],
         level: 29,
         stats: [
@@ -1206,7 +1184,7 @@ let runewords = [
     },
     {
         name: "Honor",
-        bases: "5 Socket Melee Weapons",
+        bases: "Melee Weapons",
         runes: ["Amn", "El", "Ith", "Tir", "Sol"],
         level: 27,
         stats: [
@@ -1226,7 +1204,7 @@ let runewords = [
     },
     {
         name: "Lore",
-        bases: "2 Socket Helms",
+        bases: "Helms",
         runes: ["Ort", "Sol"],
         level: 27,
         stats: [
@@ -1241,7 +1219,7 @@ let runewords = [
     },
     {
         name: "Insight",
-        bases: "4 Socket Polearms/Staves",
+        bases: "Polearms/Staves",
         runes: ["Ral", "Tir", "Tal", "Sol"],
         level: 27,
         stats: [
@@ -1261,7 +1239,7 @@ let runewords = [
     },
     {
         name: "Radiance",
-        bases: "3 Socket Helms",
+        bases: "Helms",
         runes: ["Nef", "Sol", "Ith"],
         level: 27,
         stats: [
@@ -1279,7 +1257,7 @@ let runewords = [
     },
     {
         name: "Myth",
-        bases: "3 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Hel", "Amn", "Nef"],
         level: 25,
         stats: [
@@ -1295,42 +1273,31 @@ let runewords = [
     },
     {
         name: "Spirit",
-        bases: "4 Socket Swords/Shields",
+        bases: "Swords/Shields",
         runes: ["Tal", "Thul", "Ort", "Amn"],
         level: 25,
-        stats: {
-            weapons: [
-                "+2 To All Skills",
-                "+25-35% Faster Cast Rate",
-                "+55% Faster Hit Recovery",
-                "Adds 1-50 Lightning Damage",
-                "Adds 3-14 Cold Damage",
-                "+75 Poison Damage Over 5 Seconds",
-                "7% Life Stolen Per Hit",
-                "+250 Defense Vs. Missile",
-                "+22 To Vitality",
-                "+89-112 To Mana",
-                "+3-8 Magic Absorb"
-            ],
-            shields: [
-                "+2 To All Skills",
-                "+25-35% Faster Cast Rate",
-                "+55% Faster Hit Recovery",
-                "+250 Defense Vs. Missile",
-                "+22 To Vitality",
-                "+89-112 To Mana",
-                "Cold Resist +35%",
-                "Lightning Resist +35%",
-                "Poison Resist +35%",
-                "+3-8 Magic Absorb",
-                "Attacker Takes Damage of 14"
-            ]
-        },
+        stats: [
+            "+2 To All Skills",
+            "+25-35% Faster Cast Rate",
+            "+55% Faster Hit Recovery",
+            "+250 Defense Vs. Missile",
+            "+22 To Vitality",
+            "+89-112 To Mana",
+            "+3-8 Magic Absorb",
+            "Adds 1-50 Lightning Damage (Weapons Only)",
+            "Adds 3-14 Cold Damage (Weapons Only)",
+            "+75 Poison Damage Over 5 Seconds (Weapons Only)",
+            "7% Life Stolen Per Hit (Weapons Only)",
+            "Cold Resist +35% (Shields Only)",
+            "Lightning Resist +35% (Shields Only)",
+            "Poison Resist +35% (Shields Only)",
+            "Attacker Takes Damage of 14 (Shields Only)"
+        ],
         ladder: true
     },
     {
         name: "King's Grace",
-        bases: "3 Socket Swords/Scepters",
+        bases: "Swords/Scepters",
         runes: ["Amn", "Ral", "Thul"],
         level: 25,
         stats: [
@@ -1348,7 +1315,7 @@ let runewords = [
     },
     {
         name: "Edge",
-        bases: "3 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Tir", "Tal", "Amn"],
         level: 25,
         stats: [
@@ -1367,7 +1334,7 @@ let runewords = [
     },
     {
         name: "Strength",
-        bases: "2 Socket Melee Weapons",
+        bases: "Melee Weapons",
         runes: ["Amn", "Tir"],
         level: 25,
         stats: [
@@ -1382,7 +1349,7 @@ let runewords = [
     },
     {
         name: "Holy Thunder",
-        bases: "4 Socket Scepters",
+        bases: "Scepters",
         runes: ["Eth", "Ral", "Ort", "Tal"],
         level: 23,
         stats: [
@@ -1401,7 +1368,7 @@ let runewords = [
     },
     {
         name: "Ancient's Pledge",
-        bases: "3 Socket Shields",
+        bases: "Shields",
         runes: ["Ral", "Ort", "Tal"],
         level: 21,
         stats: [
@@ -1416,7 +1383,7 @@ let runewords = [
     },
     {
         name: "Zephyr",
-        bases: "2 Socket Missile Weapons",
+        bases: "Missile Weapons",
         runes: ["Ort", "Eth"],
         level: 21,
         stats: [
@@ -1433,7 +1400,7 @@ let runewords = [
     },
     {
         name: "Leaf",
-        bases: "2 Socket Staves",
+        bases: "Staves",
         runes: ["Tir", "Ral"],
         level: 19,
         stats: [
@@ -1450,7 +1417,7 @@ let runewords = [
     },
     {
         name: "Stealth",
-        bases: "2 Socket Body Armor",
+        bases: "Body Armor",
         runes: ["Tal", "Eth"],
         level: 17,
         stats: [
@@ -1467,7 +1434,7 @@ let runewords = [
     },
     {
         name: "Malice",
-        bases: "3 Socket Melee Weapons",
+        bases: "Melee Weapons",
         runes: ["Ith", "El", "Eth"],
         level: 15,
         stats: [
@@ -1484,7 +1451,7 @@ let runewords = [
     },
     {
         name: "Nadir",
-        bases: "2 Socket Helms",
+        bases: "Helms",
         runes: ["Nef", "Tir"],
         level: 13,
         stats: [
@@ -1501,7 +1468,7 @@ let runewords = [
     },
     {
         name: "Steel",
-        bases: "2 Socket Swords/Axes/Maces",
+        bases: "Swords/Axes/Maces",
         runes: ["Tir", "El"],
         level: 13,
         stats: [
@@ -1527,6 +1494,7 @@ function removeAllRunes(array, elem) {
 }
 
 function searchRunewords() {
+    runewordsList.innerHTML = "";
     /*Adds selected runes to an array and removes unselected runes*/
     runeBtnChecks.forEach(function (runeBtnCheck) {
         if (runeBtnCheck.checked === true) {
@@ -1540,12 +1508,39 @@ function searchRunewords() {
     let selectedRunesNoDupes = selectedRunes.filter(function (selectedRune, index) {
         return selectedRunes.indexOf(selectedRune) === index;
     })
-    console.log(selectedRunesNoDupes)
 
     /*Finds all runewords that contain selected runes*/
     for (let i = 0; i < runewords.length; i++) {
         if (runewords[i].runes.every(rune => selectedRunesNoDupes.includes(rune))) {
-            console.log(runewords[i].name)
+            let runewordName = document.createElement("h2");
+            let runewordBases = document.createElement("div");
+            runewordBases.style.opacity = "0.25";
+            let runewordRunes = document.createElement("div");
+            runewordRunes.style.color = "#b4a372";
+            let runewordLevel = document.createElement("div");
+            let runewordStats = document.createElement("div");
+            runewordStats.style.color = "#595ed8";
+            runewordStats.style.fontSize = ".75rem";
+
+            let runewordNameCaps = runewords[i].name.toUpperCase();
+            let runewordBasesCaps = runewords[i].bases.toUpperCase();
+            let runewordRunesString = runewords[i].runes.join(" + ");
+            let runewordRunesCaps = runewordRunesString.toUpperCase();
+            let runewordStatsString = runewords[i].stats.join("\n");
+            let runewordStatsCaps = runewordStatsString.toUpperCase();
+
+            runewordName.innerText = runewordNameCaps;
+            runewordBases.innerText = runewordBasesCaps;
+            runewordRunes.innerText = runewordRunesCaps;
+            runewordLevel.innerText = "REQUIRED LEVEL: " + runewords[i].level;
+            runewordStats.innerText = runewordStatsCaps;
+
+            runewordsList.appendChild(runewordName);
+            runewordsList.appendChild(runewordBases);
+            runewordsList.appendChild(runewordRunes);
+            runewordsList.appendChild(runewordLevel);
+            runewordsList.appendChild(runewordStats);
+            runewordsList.appendChild(document.createElement("br"));
         }
     }
 }

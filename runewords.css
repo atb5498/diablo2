@@ -83,14 +83,13 @@
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 3rem;
     margin-left: 50px;
 }
 
 .offcanvas a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -101,7 +100,7 @@
 }
 
 .offCanvasWidth {
-    width: 33.33%;
+    width: 60%;
 }
 
 #runewords-btns {
@@ -116,19 +115,24 @@
     font-family: exocet, serif;
 }
 
+#runewords-list {
+    /* text-align: left; */
+    font-family: exocet, serif;
+    padding: 25px;
+}
+
+#runewords-list h2 {
+    font-size: calc(1rem + .9vw);
+    color: #b4a372;
+}
+
 @media only screen and (max-width: 992px) {
     .offCanvasWidth {
-        width: 50%;
+        width: 80%;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .offCanvasWidth {
-        width: 75%;
-    }
-}
-
-@media only screen and (max-width: 576px) {
     .offCanvasWidth {
         width: 100%;
     }

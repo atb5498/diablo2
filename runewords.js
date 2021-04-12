@@ -1675,6 +1675,49 @@ function filterHelms() {
     }
 }
 
+function filterWeapons() {
+    let weaponRunewords = [];
+    runewordsList.innerHTML = "";
+
+    for (let i = 0; i < foundRunewords.length; i++) {
+        if (foundRunewords[i].type.includes("weapons")) {
+            weaponRunewords.push(foundRunewords[i]);
+        }
+    }
+
+    for (let w = 0; w < weaponRunewords.length; w++) {
+        let weaponName = document.createElement("h2");
+        let weaponBases = document.createElement("div");
+        weaponBases.style.opacity = "0.25";
+        let weaponRunes = document.createElement("div");
+        weaponRunes.style.color = "#b4a372";
+        let weaponLevel = document.createElement("div");
+        let weaponStats = document.createElement("div");
+        weaponStats.style.color = "#595ed8";
+        weaponStats.style.fontSize = ".75rem";
+
+        let weaponNameCaps = weaponRunewords[w].name.toUpperCase();
+        let weaponBasesCaps = weaponRunewords[w].bases.toUpperCase();
+        let weaponRunesString = weaponRunewords[w].runes.join(" + ");
+        let weaponRunesCaps = weaponRunesString.toUpperCase();
+        let weaponStatsString = weaponRunewords[w].stats.join("\n");
+        let weaponStatsCaps = weaponStatsString.toUpperCase();
+
+        weaponName.innerText = weaponNameCaps;
+        weaponBases.innerText = weaponBasesCaps;
+        weaponRunes.innerText = weaponRunesCaps;
+        weaponLevel.innerText = "REQUIRED LEVEL: " + weaponRunewords.level;
+        weaponStats.innerText = weaponStatsCaps;
+
+        runewordsList.appendChild(weaponName);
+        runewordsList.appendChild(weaponBases);
+        runewordsList.appendChild(weaponRunes);
+        runewordsList.appendChild(weaponLevel);
+        runewordsList.appendChild(weaponStats);
+        runewordsList.appendChild(document.createElement("br"));
+    }
+}
+
 /*Displays Selected Runeword Filter*/
 $('.dropdown-menu a').click(function () {
     $('#filter').text($(this).text());

@@ -36,19 +36,15 @@
     box-shadow: 0 0 5px white;
 }
 
-#clear-btn {
-    height: 45px;
-    line-height: 45px;
-    width: 46.73px;
-    font-family: exocet, serif;
-    font-size: 1.5rem;
+#select-all-outline {
+    width: 116.5px;
 }
 
 #select-all-btn {
     height: 45px;
     line-height: 45px;
-    width: 46.73px;
     font-family: exocet, serif;
+    font-size: .75rem;
 }
 
 .overlay3 {
@@ -85,9 +81,6 @@
     right: 25px;
     font-size: 3rem;
     margin-left: 50px;
-}
-
-.offcanvas a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     color: #818181;
@@ -95,7 +88,7 @@
     transition: 0.3s;
 }
 
-.offcanvas a:hover {
+.offcanvas .closeOffcanvas:hover {
     color: #f1f1f1;
 }
 
@@ -116,7 +109,6 @@
 }
 
 #runewords-list {
-    /* text-align: left; */
     font-family: exocet, serif;
     padding: 25px;
 }

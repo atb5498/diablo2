@@ -1,25 +1,31 @@
-/*Off-Canvas Menu*/
-function openOffcanvas() {
-    document.getElementById("myOffcanvas").classList.add("offCanvasWidth");
-}
-function openNav() {
-    document.getElementById("myCanvasNav").style.width = "100%";
-    document.getElementById("myCanvasNav").style.opacity = "0.8";
-}
-function closeOffcanvas() {
-    document.getElementById("myOffcanvas").classList.remove("offCanvasWidth");
-    document.getElementById("myCanvasNav").style.width = "0%";
-    document.getElementById("myCanvasNav").style.opacity = "0";
+/*Select All Runes Button*/
+function selectAllRunes(source) {
+    let selectAllCheck = document.querySelector(".select-all-check");
+    let selectAllBtn = document.getElementById("select-all-btn");
+
+    for (let i = 0; i < runeBtnChecks.length; i++) {
+        if (runeBtnChecks[i] != source) {
+            runeBtnChecks[i].checked = source.checked;
+        }
+    }
+
+    if (selectAllCheck.checked === true) {
+        selectAllBtn.innerText = "SELECT NONE";
+    } else {
+        selectAllBtn.innerText = "SELECT ALL";
+    }
 }
 
 /*Runewords List*/
 let runeBtnChecks = document.querySelectorAll(".rune-btn-check");
 let runewordsList = document.getElementById("runewords-list");
 let selectedRunes = [];
+let foundRunewords = [];
 let runewords = [
     {
         name: "Breath of the Dying",
         bases: "Weapons",
+        type: ["weapons"],
         runes: ["Vex", "Hel", "El", "Eld", "Zod", "Eth"],
         level: 69,
         stats: [
@@ -43,6 +49,7 @@ let runewords = [
     {
         name: "Pride",
         bases: "Polearms",
+        type: ["weapons"],
         runes: ["Cham", "Sur", "Io", "Lo"],
         level: 67,
         stats: [
@@ -63,6 +70,7 @@ let runewords = [
     {
         name: "Hand of Justice",
         bases: "Weapons",
+        type: ["weapons"],
         runes: ["Sur", "Cham", "Amn", "Lo"],
         level: 67,
         stats: [
@@ -83,6 +91,7 @@ let runewords = [
     {
         name: "Doom",
         bases: "Axes/Polearms/Hammers",
+        type: ["weapons"],
         runes: ["Hel", "Ohm", "Um", "Lo", "Cham"],
         level: 67,
         stats: [
@@ -103,6 +112,7 @@ let runewords = [
     {
         name: "Last Wish",
         bases: "Swords/Hammers/Axes",
+        type: ["weapons"],
         runes: ["Jah", "Mal", "Jah", "Sur", "Jah", "Ber"],
         level: 65,
         stats: [
@@ -122,6 +132,7 @@ let runewords = [
     {
         name: "Destruction",
         bases: "Polearms/Swords",
+        type: ["weapons"],
         runes: ["Vex", "Lo", "Ber", "Jah", "Ko"],
         level: 65,
         stats: [
@@ -143,6 +154,7 @@ let runewords = [
     {
         name: "Enigma",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Jah", "Ith", "Ber"],
         level: 65,
         stats: [
@@ -162,6 +174,7 @@ let runewords = [
     {
         name: "Phoenix",
         bases: "Weapons/Shields",
+        type: ["weapons", "shields"],
         runes: ["Vex", "Vex", "Lo", "Jah"],
         level: 65,
         stats: [
@@ -184,6 +197,7 @@ let runewords = [
     {
         name: "Brand",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Jah", "Lo", "Mal", "Gul"],
         level: 65,
         stats: [
@@ -203,6 +217,7 @@ let runewords = [
     {
         name: "Faith",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Ohm", "Jah", "Lem", "Eld"],
         level: 65,
         stats: [
@@ -223,6 +238,7 @@ let runewords = [
     {
         name: "Famine",
         bases: "Axes/Hammers",
+        type: ["weapons"],
         runes: ["Fal", "Ohm", "Ort", "Jah"],
         level: 65,
         stats: [
@@ -242,6 +258,7 @@ let runewords = [
     {
         name: "Fury",
         bases: "Melee Weapons",
+        type: ["weapons"],
         runes: ["Jah", "Gul", "Eth"],
         level: 65,
         stats: [
@@ -261,6 +278,7 @@ let runewords = [
     {
         name: "Dream",
         bases: "Helms/Shields",
+        type: ["helms", "shields"],
         runes: ["Io", "Jah", "Pul"],
         level: 65,
         stats: [
@@ -281,6 +299,7 @@ let runewords = [
     {
         name: "Ice",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Amn", "Shael", "Jah", "Lo"],
         level: 65,
         stats: [
@@ -301,6 +320,7 @@ let runewords = [
     {
         name: "Eternity",
         bases: "Melee Weapons",
+        type: ["weapons"],
         runes: ["Amn", "Ber", "Ist", "Sol", "Sur"],
         level: 63,
         stats: [
@@ -322,6 +342,7 @@ let runewords = [
     {
         name: "Infinity",
         bases: "Polearms",
+        type: ["weapons"],
         runes: ["Ber", "Mal", "Ber", "Ist"],
         level: 63,
         stats: [
@@ -341,6 +362,7 @@ let runewords = [
     {
         name: "Chains of Honor",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Dol", "Um", "Ber", "Ist"],
         level: 63,
         stats: [
@@ -360,6 +382,7 @@ let runewords = [
     {
         name: "Beast",
         bases: "Axes/Scepters/Hammers",
+        type: ["weapons"],
         runes: ["Ber", "Tir", "Um", "Mal", "Lum"],
         level: 63,
         stats: [
@@ -381,6 +404,7 @@ let runewords = [
     {
         name: "Wrath",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Pul", "Lum", "Ber", "Mal"],
         level: 63,
         stats: [
@@ -401,6 +425,7 @@ let runewords = [
     {
         name: "Dragon",
         bases: "Body Armor/Shields",
+        type: ["body armor, shields"],
         runes: ["Sur", "Lo", "Sol"],
         level: 61,
         stats: [
@@ -421,6 +446,7 @@ let runewords = [
     {
         name: "Bramble",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Ral", "Ohm", "Sur", "Eth"],
         level: 61,
         stats: [
@@ -441,6 +467,7 @@ let runewords = [
     {
         name: "Wind",
         bases: "Melee Weapons",
+        type: ["weapons"],
         runes: ["Sur", "El"],
         level: 61,
         stats: [
@@ -460,6 +487,7 @@ let runewords = [
     {
         name: "Grief",
         bases: "Swords/Axes",
+        type: ["weapons"],
         runes: ["Eth", "Tir", "Lo", "Mal", "Ral"],
         level: 59,
         stats: [
@@ -481,6 +509,7 @@ let runewords = [
     {
         name: "Fortitude",
         bases: "Weapons/Body Armor",
+        type: ["weapons", "body armor"],
         runes: ["El", "Sol", "Dol", "Lo"],
         level: 59,
         stats: [
@@ -506,6 +535,7 @@ let runewords = [
     {
         name: "Oath",
         bases: "Swords/Axes/Maces",
+        type: ["weapons"],
         runes: ["Shael", "Pul", "Mal", "Lum"],
         level: 59,
         stats: [
@@ -526,6 +556,7 @@ let runewords = [
     {
         name: "Exile",
         bases: "Paladin Shields",
+        type: ["shields"],
         runes: ["Vex", "Ohm", "Ist", "Dol"],
         level: 57,
         stats: [
@@ -546,6 +577,7 @@ let runewords = [
     {
         name: "Call To Arms",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Dol", "Um", "Ber", "Ist"],
         level: 57,
         stats: [
@@ -566,6 +598,7 @@ let runewords = [
     {
         name: "Chaos",
         bases: "Claws",
+        type: ["weapons"],
         runes: ["Fal", "Ohm", "Um"],
         level: 57,
         stats: [
@@ -584,6 +617,7 @@ let runewords = [
     {
         name: "Death",
         bases: "Swords/Axes",
+        type: ["weapons"],
         runes: ["Hel", "El", "Vex", "Ort", "Gul"],
         level: 55,
         stats: [
@@ -606,6 +640,7 @@ let runewords = [
     {
         name: "Silence",
         bases: "Weapons",
+        type: ["weapons"],
         runes: ["Dol", "Eld", "Hel", "Ist", "Tir", "Vex"],
         level: 55,
         stats: [
@@ -628,6 +663,7 @@ let runewords = [
     {
         name: "Heart of the Oak",
         bases: "Staves/Maces",
+        type: ["weapons"],
         runes: ["Ko", "Vex", "Pul", "Thul"],
         level: 55,
         stats: [
@@ -649,6 +685,7 @@ let runewords = [
     {
         name: "Principle",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Ral", "Gul", "Eld"],
         level: 55,
         stats: [
@@ -665,6 +702,7 @@ let runewords = [
     {
         name: "Kingslayer",
         bases: "Swords/Axes",
+        type: ["weapons"],
         runes: ["Mal", "Um", "Gul", "Fal"],
         level: 53,
         stats: [
@@ -684,6 +722,7 @@ let runewords = [
     {
         name: "Rift",
         bases: "Polearms/Scepters",
+        type: ["weapons"],
         runes: ["Hel", "Ko", "Lem", "Gul"],
         level: 53,
         stats: [
@@ -704,6 +743,7 @@ let runewords = [
     {
         name: "Delirium",
         bases: "Helms",
+        type: ["helms"],
         runes: ["Lem", "Ist", "Io"],
         level: 51,
         stats: [
@@ -723,6 +763,7 @@ let runewords = [
     {
         name: "Sanctuary",
         bases: "Shields",
+        type: ["shields"],
         runes: ["Ko", "Ko", "Mal"],
         level: 49,
         stats: [
@@ -741,6 +782,7 @@ let runewords = [
     {
         name: "Venom",
         bases: "Weapons",
+        type: ["weapons"],
         runes: ["Tal", "Dol", "Mal"],
         level: 49,
         stats: [
@@ -757,6 +799,7 @@ let runewords = [
     {
         name: "Rain",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Ort", "Mal", "Ith"],
         level: 49,
         stats: [
@@ -773,6 +816,7 @@ let runewords = [
     {
         name: "Prudence",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Mal", "Tir"],
         level: 49,
         stats: [
@@ -790,6 +834,7 @@ let runewords = [
     {
         name: "Bone",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Sol", "Um", "Um"],
         level: 47,
         stats: [
@@ -805,6 +850,7 @@ let runewords = [
     {
         name: "Gloom",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Fal", "Um", "Pul"],
         level: 47,
         stats: [
@@ -822,6 +868,7 @@ let runewords = [
     {
         name: "Stone",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Shael", "Um", "Pul", "Lum"],
         level: 47,
         stats: [
@@ -840,6 +887,7 @@ let runewords = [
     {
         name: "Duress",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Shael", "Um", "Thul"],
         level: 47,
         stats: [
@@ -860,6 +908,7 @@ let runewords = [
     {
         name: "Crescent Moon",
         bases: "Axes/Swords/Polearms",
+        type: ["weapons"],
         runes: ["Shael", "Um", "Tir"],
         level: 47,
         stats: [
@@ -879,6 +928,7 @@ let runewords = [
     {
         name: "Enlightenment",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Pul", "Ral", "Sol"],
         level: 45,
         stats: [
@@ -895,6 +945,7 @@ let runewords = [
     {
         name: "Lawbringer",
         bases: "Swords/Hammers/Scepters",
+        type: ["weapons"],
         runes: ["Amn", "Lem", "Ko"],
         level: 43,
         stats: [
@@ -914,6 +965,7 @@ let runewords = [
     {
         name: "Wealth",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Lem", "Ko", "Tir"],
         level: 43,
         stats: [
@@ -927,6 +979,7 @@ let runewords = [
     {
         name: "Voice of Reason",
         bases: "Swords/Maces",
+        type: ["weapons"],
         runes: ["Lem", "Ko", "El", "Eld"],
         level: 43,
         stats: [
@@ -948,6 +1001,7 @@ let runewords = [
     {
         name: "Passion",
         bases: "Weapons",
+        type: ["weapons"],
         runes: ["Dol", "Ort", "Eld", "Lem"],
         level: 43,
         stats: [
@@ -969,6 +1023,7 @@ let runewords = [
     {
         name: "Treachery",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Shael", "Thul", "Lem"],
         level: 43,
         stats: [
@@ -985,6 +1040,7 @@ let runewords = [
     {
         name: "Obedience",
         bases: "Polearms",
+        type: ["weapons"],
         runes: ["Hel", "Ko", "Thul", "Eth", "Fal"],
         level: 41,
         stats: [
@@ -1006,6 +1062,7 @@ let runewords = [
     {
         name: "Lionheart",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Hel", "Lum", "Fal"],
         level: 41,
         stats: [
@@ -1023,6 +1080,7 @@ let runewords = [
     {
         name: "Melody",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Shael", "Ko", "Nef"],
         level: 39,
         stats: [
@@ -1041,6 +1099,7 @@ let runewords = [
     {
         name: "Harmony",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Tir", "Ith", "Sol", "Ko"],
         level: 39,
         stats: [
@@ -1063,6 +1122,7 @@ let runewords = [
     {
         name: "Memory",
         bases: "Staves",
+        type: ["weapons"],
         runes: ["Lum", "Io", "Sol", "Eth"],
         level: 37,
         stats: [
@@ -1083,6 +1143,7 @@ let runewords = [
     {
         name: "Splendor",
         bases: "Shields",
+        type: ["shields"],
         runes: ["Eth", "Lum"],
         level: 37,
         stats: [
@@ -1101,6 +1162,7 @@ let runewords = [
     {
         name: "Smoke",
         bases: "Shields",
+        type: ["shields"],
         runes: ["Nef", "Lum"],
         level: 37,
         stats: [
@@ -1117,6 +1179,7 @@ let runewords = [
     {
         name: "White",
         bases: "Wand",
+        type: ["weapons"],
         runes: ["Dol", "Io"],
         level: 35,
         stats: [
@@ -1135,6 +1198,7 @@ let runewords = [
     {
         name: "Black",
         bases: "Clubs/Hammers/Maces",
+        type: ["weapons"],
         runes: ["Thul", "Io", "Nef"],
         level: 35,
         stats: [
@@ -1153,6 +1217,7 @@ let runewords = [
     {
         name: "Peace",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Shael", "Thul", "Amn"],
         level: 29,
         stats: [
@@ -1169,6 +1234,7 @@ let runewords = [
     {
         name: "Rhyme",
         bases: "Shields",
+        type: ["shields"],
         runes: ["Shael", "Eth"],
         level: 29,
         stats: [
@@ -1185,6 +1251,7 @@ let runewords = [
     {
         name: "Honor",
         bases: "Melee Weapons",
+        type: ["weapons"],
         runes: ["Amn", "El", "Ith", "Tir", "Sol"],
         level: 27,
         stats: [
@@ -1205,6 +1272,7 @@ let runewords = [
     {
         name: "Lore",
         bases: "Helms",
+        type: ["helms"],
         runes: ["Ort", "Sol"],
         level: 27,
         stats: [
@@ -1220,6 +1288,7 @@ let runewords = [
     {
         name: "Insight",
         bases: "Polearms/Staves",
+        type: ["weapons"],
         runes: ["Ral", "Tir", "Tal", "Sol"],
         level: 27,
         stats: [
@@ -1240,6 +1309,7 @@ let runewords = [
     {
         name: "Radiance",
         bases: "Helms",
+        type: ["helms"],
         runes: ["Nef", "Sol", "Ith"],
         level: 27,
         stats: [
@@ -1258,6 +1328,7 @@ let runewords = [
     {
         name: "Myth",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Hel", "Amn", "Nef"],
         level: 25,
         stats: [
@@ -1274,6 +1345,7 @@ let runewords = [
     {
         name: "Spirit",
         bases: "Swords/Shields",
+        type: ["weapons", "shields"],
         runes: ["Tal", "Thul", "Ort", "Amn"],
         level: 25,
         stats: [
@@ -1298,6 +1370,7 @@ let runewords = [
     {
         name: "King's Grace",
         bases: "Swords/Scepters",
+        type: ["weapons"],
         runes: ["Amn", "Ral", "Thul"],
         level: 25,
         stats: [
@@ -1316,6 +1389,7 @@ let runewords = [
     {
         name: "Edge",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Tir", "Tal", "Amn"],
         level: 25,
         stats: [
@@ -1335,6 +1409,7 @@ let runewords = [
     {
         name: "Strength",
         bases: "Melee Weapons",
+        type: ["weapons"],
         runes: ["Amn", "Tir"],
         level: 25,
         stats: [
@@ -1350,6 +1425,7 @@ let runewords = [
     {
         name: "Holy Thunder",
         bases: "Scepters",
+        type: ["weapons"],
         runes: ["Eth", "Ral", "Ort", "Tal"],
         level: 23,
         stats: [
@@ -1369,6 +1445,7 @@ let runewords = [
     {
         name: "Ancient's Pledge",
         bases: "Shields",
+        type: ["shields"],
         runes: ["Ral", "Ort", "Tal"],
         level: 21,
         stats: [
@@ -1384,6 +1461,7 @@ let runewords = [
     {
         name: "Zephyr",
         bases: "Missile Weapons",
+        type: ["weapons"],
         runes: ["Ort", "Eth"],
         level: 21,
         stats: [
@@ -1401,6 +1479,7 @@ let runewords = [
     {
         name: "Leaf",
         bases: "Staves",
+        type: ["weapons"],
         runes: ["Tir", "Ral"],
         level: 19,
         stats: [
@@ -1418,6 +1497,7 @@ let runewords = [
     {
         name: "Stealth",
         bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Tal", "Eth"],
         level: 17,
         stats: [
@@ -1435,6 +1515,7 @@ let runewords = [
     {
         name: "Malice",
         bases: "Melee Weapons",
+        type: ["weapons"],
         runes: ["Ith", "El", "Eth"],
         level: 15,
         stats: [
@@ -1452,6 +1533,7 @@ let runewords = [
     {
         name: "Nadir",
         bases: "Helms",
+        type: ["helms"],
         runes: ["Nef", "Tir"],
         level: 13,
         stats: [
@@ -1469,6 +1551,7 @@ let runewords = [
     {
         name: "Steel",
         bases: "Swords/Axes/Maces",
+        type: ["weapons"],
         runes: ["Tir", "El"],
         level: 13,
         stats: [
@@ -1495,6 +1578,8 @@ function removeAllRunes(array, elem) {
 
 function searchRunewords() {
     runewordsList.innerHTML = "";
+    foundRunewords = [];
+
     /*Adds selected runes to an array and removes unselected runes*/
     runeBtnChecks.forEach(function (runeBtnCheck) {
         if (runeBtnCheck.checked === true) {
@@ -1512,6 +1597,8 @@ function searchRunewords() {
     /*Finds all runewords that contain selected runes*/
     for (let i = 0; i < runewords.length; i++) {
         if (runewords[i].runes.every(rune => selectedRunesNoDupes.includes(rune))) {
+            foundRunewords.push(runewords[i]);
+
             let runewordName = document.createElement("h2");
             let runewordBases = document.createElement("div");
             runewordBases.style.opacity = "0.25";
@@ -1543,4 +1630,67 @@ function searchRunewords() {
             runewordsList.appendChild(document.createElement("br"));
         }
     }
+}
+
+function filterHelms() {
+    let helmRunewords = [];
+    runewordsList.innerHTML = "";
+
+    for (let i = 0; i < foundRunewords.length; i++) {
+        if (foundRunewords[i].type.includes("helms")) {
+            helmRunewords.push(foundRunewords[i]);
+        }
+    }
+
+    for (let h = 0; h < helmRunewords.length; h++) {
+        let helmName = document.createElement("h2");
+        let helmBases = document.createElement("div");
+        helmBases.style.opacity = "0.25";
+        let helmRunes = document.createElement("div");
+        helmRunes.style.color = "#b4a372";
+        let helmLevel = document.createElement("div");
+        let helmStats = document.createElement("div");
+        helmStats.style.color = "#595ed8";
+        helmStats.style.fontSize = ".75rem";
+
+        let helmNameCaps = helmRunewords[h].name.toUpperCase();
+        let helmBasesCaps = helmRunewords[h].bases.toUpperCase();
+        let helmRunesString = helmRunewords[h].runes.join(" + ");
+        let helmRunesCaps = helmRunesString.toUpperCase();
+        let helmStatsString = helmRunewords[h].stats.join("\n");
+        let helmStatsCaps = helmStatsString.toUpperCase();
+
+        helmName.innerText = helmNameCaps;
+        helmBases.innerText = helmBasesCaps;
+        helmRunes.innerText = helmRunesCaps;
+        helmLevel.innerText = "REQUIRED LEVEL: " + helmRunewords.level;
+        helmStats.innerText = helmStatsCaps;
+
+        runewordsList.appendChild(helmName);
+        runewordsList.appendChild(helmBases);
+        runewordsList.appendChild(helmRunes);
+        runewordsList.appendChild(helmLevel);
+        runewordsList.appendChild(helmStats);
+        runewordsList.appendChild(document.createElement("br"));
+    }
+}
+
+/*Displays Selected Runeword Filter*/
+$('.dropdown-menu a').click(function () {
+    $('#filter').text($(this).text());
+});
+
+/*Off-Canvas Menu*/
+function openOffcanvas() {
+    document.getElementById("myOffcanvas").classList.add("offCanvasWidth");
+}
+function openNav() {
+    document.getElementById("myCanvasNav").style.width = "100%";
+    document.getElementById("myCanvasNav").style.opacity = "0.8";
+}
+function closeOffcanvas() {
+    document.getElementById("myOffcanvas").classList.remove("offCanvasWidth");
+    document.getElementById("myCanvasNav").style.width = "0%";
+    document.getElementById("myCanvasNav").style.opacity = "0";
+    $('#filter').text("Show All");
 }

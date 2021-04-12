@@ -13,8 +13,9 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
 
-    <!--FontAwesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
     <!--Adobe Fonts-->
     <link rel="stylesheet" href=https://use.typekit.net/hmm0yrb.css>
@@ -58,7 +59,7 @@
     <!--Hero-->
     <div class="hero-image">
         <div class="hero-text">
-            <h1>Runewords</h1>
+            <h1>RUNEWORDS</h1>
             <p>Select your Runes to discover each Runeword possibility.</p>
         </div>
     </div>
@@ -278,32 +279,28 @@
         <div class="row">
             <div class="col">
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                    <input class="btn-check" id="btncheck31" autocomplete="off">
-                    <label class="btn btn-outline-secondary rune" for="btncheck31">
-                        <div id="clear-btn">x</div>
-                    </label>
-
-                    <input value="Jah" type="checkbox" class="btn-check rune-btn-check" id="btncheck32"
+                    <input value="Jah" type="checkbox" class="btn-check rune-btn-check" id="btncheck31"
                         autocomplete="off">
-                    <label class="btn btn-outline-secondary rune" for="btncheck32">
+                    <label class="btn btn-outline-secondary rune" for="btncheck31">
                         <img src="assets/runes/jah-rune.png" alt="Diablo 2 Jah Rune">
                     </label>
 
-                    <input value="Cham" type="checkbox" class="btn-check rune-btn-check" id="btncheck33"
+                    <input value="Cham" type="checkbox" class="btn-check rune-btn-check" id="btncheck32"
                         autocomplete="off">
-                    <label class="btn btn-outline-secondary rune" for="btncheck33">
+                    <label class="btn btn-outline-secondary rune" for="btncheck32">
                         <img src="assets/runes/cham-rune.png" alt="Diablo 2 Cham Rune">
                     </label>
 
-                    <input value="Zod" type="checkbox" class="btn-check rune-btn-check" id="btncheck34"
+                    <input value="Zod" type="checkbox" class="btn-check rune-btn-check" id="btncheck33"
                         autocomplete="off">
-                    <label class="btn btn-outline-secondary rune" for="btncheck34">
+                    <label class="btn btn-outline-secondary rune" for="btncheck33">
                         <img src="assets/runes/zod-rune.png" alt="Diablo 2 Zod Rune">
                     </label>
 
-                    <input class="btn-check" id="btncheck35" autocomplete="off">
-                    <label class="btn btn-outline-secondary rune" for="btncheck35">
-                        <div id="select-all-btn">ALL</div>
+                    <input type="checkbox" class="btn-check select-all-check" id="btncheck34" autocomplete="off"
+                        onclick="selectAllRunes(this)">
+                    <label id="select-all-outline" class="btn btn-outline-secondary rune" for="btncheck34">
+                        <div id="select-all-btn">SELECT ALL</div>
                     </label>
                 </div>
             </div>
@@ -312,6 +309,27 @@
         <div id="myCanvasNav" class="overlay3" onclick="closeOffcanvas()" style="width: 0%; opacity: 0;"></div>
 
         <div id="myOffcanvas" class="offcanvas">
+            <div class="container">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item dropdown">
+                        <a id="filter" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Show All
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#" onclick="filterHelms()">Helms</a></li>
+                            <li><a class="dropdown-item" href="#">Weapons</a></li>
+                            <li><a class="dropdown-item" href="#">Body Armor</a></li>
+                            <li><a class="dropdown-item" href="#">Shields</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#">Show All</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Non-Ladder Only</a>
+                    </li>
+                </ul>
+            </div>
             <a href="javascript:void(0)" class="closeOffcanvas" onclick="closeOffcanvas()">×</a>
             <div id="runewords-list"></div>
         </div>

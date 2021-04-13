@@ -47,6 +47,18 @@
     font-size: .75rem;
 }
 
+#runewords-btns {
+    width: 290.67px;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#runewords-btns .col button {
+    width: 100%;
+    font-family: exocet, serif;
+}
+
 .overlay3 {
     height: 100%;
     width: 0;
@@ -75,6 +87,10 @@
     padding-top: 60px;
 }
 
+.offcanvas a {
+    font-weight: bold;
+}
+
 .offcanvas .closeOffcanvas {
     position: absolute;
     top: 0;
@@ -96,16 +112,8 @@
     width: 60%;
 }
 
-#runewords-btns {
-    width: 290.67px;
-    margin-top: 25px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#runewords-btns .col button {
-    width: 100%;
-    font-family: exocet, serif;
+#runewords-filter, #non-ladder {
+    color: white;
 }
 
 #runewords-list {

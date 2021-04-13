@@ -312,10 +312,8 @@
             <div class="container">
                 <ul class="nav justify-content-center">
                     <li class="nav-item dropdown">
-                        <a id="filter" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Show All
-                        </a>
+                        <a id="runewords-filter" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Show All</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#" onclick="filterHelms()">Helms</a></li>
                             <li><a class="dropdown-item" href="#" onclick="filterWeapons()">Weapons</a></li>
@@ -326,7 +324,9 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Non-Ladder Only</a>
+                        <a id="non-ladder" class="nav-link active" aria-current="page" href="#"
+                            onclick="nonLadderToggle()">Non-Ladder Only <input id="non-ladder-check"
+                                type="checkbox"></a>
                     </li>
                 </ul>
             </div>

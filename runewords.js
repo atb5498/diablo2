@@ -1,20 +1,3 @@
-/*Select All Runes Button*/
-function selectAllRunes(source) {
-    let selectAllCheck = document.querySelector(".select-all-check");
-    let selectAllBtn = document.getElementById("select-all-btn");
-    for (let i = 0; i < runeBtnChecks.length; i++) {
-        if (runeBtnChecks[i] != source) {
-            runeBtnChecks[i].checked = source.checked;
-        }
-    }
-    if (selectAllCheck.checked) {
-        selectAllBtn.innerText = "SELECT NONE";
-    } else {
-        selectAllBtn.innerText = "SELECT ALL";
-    }
-}
-
-/*Runewords List*/
 let runeBtnChecks = document.querySelectorAll(".rune-btn-check");
 let runewordsList = document.getElementById("runewords-list");
 let runewordsFilter = document.getElementById("runewords-filter");
@@ -22,6 +5,9 @@ let nonLadderCheck = document.getElementById("non-ladder-check");
 let selectedRunes = [];
 let foundRunewords = [];
 let helmRunewords = [];
+let weaponRunewords = [];
+let bodyArmorRunewords = [];
+let shieldRunewords = [];
 let runewords = [
     {
         name: "Breath of the Dying",
@@ -577,8 +563,8 @@ let runewords = [
     },
     {
         name: "Call To Arms",
-        bases: "Body Armor",
-        type: ["body armor"],
+        bases: "Weapons",
+        type: ["weapons"],
         runes: ["Dol", "Um", "Ber", "Ist"],
         level: 57,
         stats: [
@@ -1569,6 +1555,22 @@ let runewords = [
     }
 ]
 
+/*Select All Runes Button*/
+function selectAllRunes(source) {
+    let selectAllCheck = document.querySelector(".select-all-check");
+    let selectAllBtn = document.getElementById("select-all-btn");
+    for (let i = 0; i < runeBtnChecks.length; i++) {
+        if (runeBtnChecks[i] != source) {
+            runeBtnChecks[i].checked = source.checked;
+        }
+    }
+    if (selectAllCheck.checked) {
+        selectAllBtn.innerText = "SELECT NONE";
+    } else {
+        selectAllBtn.innerText = "SELECT ALL";
+    }
+}
+
 function removeAllRunes(array, elem) {
     let index = array.indexOf(elem);
     while (index > -1) {
@@ -1642,41 +1644,77 @@ function filterHelms() {
         }
     }
 
-    for (let h = 0; h < helmRunewords.length; h++) {
-        let helmName = document.createElement("h2");
-        let helmBases = document.createElement("div");
-        helmBases.style.opacity = "0.33";
-        let helmRunes = document.createElement("div");
-        helmRunes.style.color = "#b4a372";
-        let helmLevel = document.createElement("div");
-        let helmStats = document.createElement("div");
-        helmStats.style.color = "#595ed8";
-        helmStats.style.fontSize = ".75rem";
+    if (nonLadderCheck.checked) {
+        for (let h = 0; h < helmRunewords.length; h++) {
+            if (helmRunewords[h].ladder === false) {
+                let helmNlName = document.createElement("h2");
+                let helmNlBases = document.createElement("div");
+                helmNlBases.style.opacity = "0.33";
+                let helmNlRunes = document.createElement("div");
+                helmNlRunes.style.color = "#b4a372";
+                let helmNlLevel = document.createElement("div");
+                let helmNlStats = document.createElement("div");
+                helmNlStats.style.color = "#595ed8";
+                helmNlStats.style.fontSize = ".75rem";
 
-        let helmNameCaps = helmRunewords[h].name.toUpperCase();
-        let helmBasesCaps = helmRunewords[h].bases.toUpperCase();
-        let helmRunesString = helmRunewords[h].runes.join(" + ");
-        let helmRunesCaps = helmRunesString.toUpperCase();
-        let helmStatsString = helmRunewords[h].stats.join("\n");
-        let helmStatsCaps = helmStatsString.toUpperCase();
+                let helmNlNameCaps = helmRunewords[h].name.toUpperCase();
+                let helmNlBasesCaps = helmRunewords[h].bases.toUpperCase();
+                let helmNlRunesString = helmRunewords[h].runes.join(" + ");
+                let helmNlRunesCaps = helmNlRunesString.toUpperCase();
+                let helmNlStatsString = helmRunewords[h].stats.join("\n");
+                let helmNlStatsCaps = helmNlStatsString.toUpperCase();
 
-        helmName.innerText = helmNameCaps;
-        helmBases.innerText = helmBasesCaps;
-        helmRunes.innerText = helmRunesCaps;
-        helmLevel.innerText = "REQUIRED LEVEL: " + helmRunewords[h].level;
-        helmStats.innerText = helmStatsCaps;
+                helmNlName.innerText = helmNlNameCaps;
+                helmNlBases.innerText = helmNlBasesCaps;
+                helmNlRunes.innerText = helmNlRunesCaps;
+                helmNlLevel.innerText = "REQUIRED LEVEL: " + helmRunewords[h].level;
+                helmNlStats.innerText = helmNlStatsCaps;
 
-        runewordsList.appendChild(helmName);
-        runewordsList.appendChild(helmBases);
-        runewordsList.appendChild(helmRunes);
-        runewordsList.appendChild(helmLevel);
-        runewordsList.appendChild(helmStats);
-        runewordsList.appendChild(document.createElement("br"));
+                runewordsList.appendChild(helmNlName);
+                runewordsList.appendChild(helmNlBases);
+                runewordsList.appendChild(helmNlRunes);
+                runewordsList.appendChild(helmNlLevel);
+                runewordsList.appendChild(helmNlStats);
+                runewordsList.appendChild(document.createElement("br"));
+            }
+        }
+    } else {
+        for (let h = 0; h < helmRunewords.length; h++) {
+            let helmName = document.createElement("h2");
+            let helmBases = document.createElement("div");
+            helmBases.style.opacity = "0.33";
+            let helmRunes = document.createElement("div");
+            helmRunes.style.color = "#b4a372";
+            let helmLevel = document.createElement("div");
+            let helmStats = document.createElement("div");
+            helmStats.style.color = "#595ed8";
+            helmStats.style.fontSize = ".75rem";
+
+            let helmNameCaps = helmRunewords[h].name.toUpperCase();
+            let helmBasesCaps = helmRunewords[h].bases.toUpperCase();
+            let helmRunesString = helmRunewords[h].runes.join(" + ");
+            let helmRunesCaps = helmRunesString.toUpperCase();
+            let helmStatsString = helmRunewords[h].stats.join("\n");
+            let helmStatsCaps = helmStatsString.toUpperCase();
+
+            helmName.innerText = helmNameCaps;
+            helmBases.innerText = helmBasesCaps;
+            helmRunes.innerText = helmRunesCaps;
+            helmLevel.innerText = "REQUIRED LEVEL: " + helmRunewords[h].level;
+            helmStats.innerText = helmStatsCaps;
+
+            runewordsList.appendChild(helmName);
+            runewordsList.appendChild(helmBases);
+            runewordsList.appendChild(helmRunes);
+            runewordsList.appendChild(helmLevel);
+            runewordsList.appendChild(helmStats);
+            runewordsList.appendChild(document.createElement("br"));
+        }
     }
 }
 
 function filterWeapons() {
-    let weaponRunewords = [];
+    weaponRunewords = [];
     runewordsList.innerHTML = "";
 
     for (let i = 0; i < foundRunewords.length; i++) {
@@ -1685,41 +1723,77 @@ function filterWeapons() {
         }
     }
 
-    for (let w = 0; w < weaponRunewords.length; w++) {
-        let weaponName = document.createElement("h2");
-        let weaponBases = document.createElement("div");
-        weaponBases.style.opacity = "0.33";
-        let weaponRunes = document.createElement("div");
-        weaponRunes.style.color = "#b4a372";
-        let weaponLevel = document.createElement("div");
-        let weaponStats = document.createElement("div");
-        weaponStats.style.color = "#595ed8";
-        weaponStats.style.fontSize = ".75rem";
+    if (nonLadderCheck.checked) {
+        for (let w = 0; w < weaponRunewords.length; w++) {
+            if (weaponRunewords[w].ladder === false) {
+                let weaponNlName = document.createElement("h2");
+                let weaponNlBases = document.createElement("div");
+                weaponNlBases.style.opacity = "0.33";
+                let weaponNlRunes = document.createElement("div");
+                weaponNlRunes.style.color = "#b4a372";
+                let weaponNlLevel = document.createElement("div");
+                let weaponNlStats = document.createElement("div");
+                weaponNlStats.style.color = "#595ed8";
+                weaponNlStats.style.fontSize = ".75rem";
 
-        let weaponNameCaps = weaponRunewords[w].name.toUpperCase();
-        let weaponBasesCaps = weaponRunewords[w].bases.toUpperCase();
-        let weaponRunesString = weaponRunewords[w].runes.join(" + ");
-        let weaponRunesCaps = weaponRunesString.toUpperCase();
-        let weaponStatsString = weaponRunewords[w].stats.join("\n");
-        let weaponStatsCaps = weaponStatsString.toUpperCase();
+                let weaponNlNameCaps = weaponRunewords[w].name.toUpperCase();
+                let weaponNlBasesCaps = weaponRunewords[w].bases.toUpperCase();
+                let weaponNlRunesString = weaponRunewords[w].runes.join(" + ");
+                let weaponNlRunesCaps = weaponNlRunesString.toUpperCase();
+                let weaponNlStatsString = weaponRunewords[w].stats.join("\n");
+                let weaponNlStatsCaps = weaponNlStatsString.toUpperCase();
 
-        weaponName.innerText = weaponNameCaps;
-        weaponBases.innerText = weaponBasesCaps;
-        weaponRunes.innerText = weaponRunesCaps;
-        weaponLevel.innerText = "REQUIRED LEVEL: " + weaponRunewords[w].level;
-        weaponStats.innerText = weaponStatsCaps;
+                weaponNlName.innerText = weaponNlNameCaps;
+                weaponNlBases.innerText = weaponNlBasesCaps;
+                weaponNlRunes.innerText = weaponNlRunesCaps;
+                weaponNlLevel.innerText = "REQUIRED LEVEL: " + weaponRunewords[w].level;
+                weaponNlStats.innerText = weaponNlStatsCaps;
 
-        runewordsList.appendChild(weaponName);
-        runewordsList.appendChild(weaponBases);
-        runewordsList.appendChild(weaponRunes);
-        runewordsList.appendChild(weaponLevel);
-        runewordsList.appendChild(weaponStats);
-        runewordsList.appendChild(document.createElement("br"));
+                runewordsList.appendChild(weaponNlName);
+                runewordsList.appendChild(weaponNlBases);
+                runewordsList.appendChild(weaponNlRunes);
+                runewordsList.appendChild(weaponNlLevel);
+                runewordsList.appendChild(weaponNlStats);
+                runewordsList.appendChild(document.createElement("br"));
+            }
+        }
+    } else {
+        for (let w = 0; w < weaponRunewords.length; w++) {
+            let weaponName = document.createElement("h2");
+            let weaponBases = document.createElement("div");
+            weaponBases.style.opacity = "0.33";
+            let weaponRunes = document.createElement("div");
+            weaponRunes.style.color = "#b4a372";
+            let weaponLevel = document.createElement("div");
+            let weaponStats = document.createElement("div");
+            weaponStats.style.color = "#595ed8";
+            weaponStats.style.fontSize = ".75rem";
+
+            let weaponNameCaps = weaponRunewords[w].name.toUpperCase();
+            let weaponBasesCaps = weaponRunewords[w].bases.toUpperCase();
+            let weaponRunesString = weaponRunewords[w].runes.join(" + ");
+            let weaponRunesCaps = weaponRunesString.toUpperCase();
+            let weaponStatsString = weaponRunewords[w].stats.join("\n");
+            let weaponStatsCaps = weaponStatsString.toUpperCase();
+
+            weaponName.innerText = weaponNameCaps;
+            weaponBases.innerText = weaponBasesCaps;
+            weaponRunes.innerText = weaponRunesCaps;
+            weaponLevel.innerText = "REQUIRED LEVEL: " + weaponRunewords[w].level;
+            weaponStats.innerText = weaponStatsCaps;
+
+            runewordsList.appendChild(weaponName);
+            runewordsList.appendChild(weaponBases);
+            runewordsList.appendChild(weaponRunes);
+            runewordsList.appendChild(weaponLevel);
+            runewordsList.appendChild(weaponStats);
+            runewordsList.appendChild(document.createElement("br"));
+        }
     }
 }
 
 function filterBodyArmor() {
-    let bodyArmorRunewords = [];
+    bodyArmorRunewords = [];
     runewordsList.innerHTML = "";
 
     for (let i = 0; i < foundRunewords.length; i++) {
@@ -1762,7 +1836,7 @@ function filterBodyArmor() {
 }
 
 function filterShields() {
-    let shieldRunewords = [];
+    shieldRunewords = [];
     runewordsList.innerHTML = "";
 
     for (let i = 0; i < foundRunewords.length; i++) {
@@ -1914,13 +1988,157 @@ function nonLadderToggle() {
             }
         }
     } else if (nonLadderCheck.checked && runewordsFilter.innerText == "Weapons") {
-        console.log("WEAPONS CHECKED")
+        runewordsList.innerHTML = "";
+
+        for (let w = 0; w < weaponRunewords.length; w++) {
+            if (weaponRunewords[w].ladder === false) {
+                let weaponNlName = document.createElement("h2");
+                let weaponNlBases = document.createElement("div");
+                weaponNlBases.style.opacity = "0.33";
+                let weaponNlRunes = document.createElement("div");
+                weaponNlRunes.style.color = "#b4a372";
+                let weaponNlLevel = document.createElement("div");
+                let weaponNlStats = document.createElement("div");
+                weaponNlStats.style.color = "#595ed8";
+                weaponNlStats.style.fontSize = ".75rem";
+
+                let weaponNlNameCaps = weaponRunewords[w].name.toUpperCase();
+                let weaponNlBasesCaps = weaponRunewords[w].bases.toUpperCase();
+                let weaponNlRunesString = weaponRunewords[w].runes.join(" + ");
+                let weaponNlRunesCaps = weaponNlRunesString.toUpperCase();
+                let weaponNlStatsString = weaponRunewords[w].stats.join("\n");
+                let weaponNlStatsCaps = weaponNlStatsString.toUpperCase();
+
+                weaponNlName.innerText = weaponNlNameCaps;
+                weaponNlBases.innerText = weaponNlBasesCaps;
+                weaponNlRunes.innerText = weaponNlRunesCaps;
+                weaponNlLevel.innerText = "REQUIRED LEVEL: " + weaponRunewords[w].level;
+                weaponNlStats.innerText = weaponNlStatsCaps;
+
+                runewordsList.appendChild(weaponNlName);
+                runewordsList.appendChild(weaponNlBases);
+                runewordsList.appendChild(weaponNlRunes);
+                runewordsList.appendChild(weaponNlLevel);
+                runewordsList.appendChild(weaponNlStats);
+                runewordsList.appendChild(document.createElement("br"));
+            }
+        }
     } else if (nonLadderCheck.checked && runewordsFilter.innerText == "Body Armor") {
-        console.log("BODY ARMOR CHECKED")
+        runewordsList.innerHTML = "";
+
+        for (let b = 0; b < bodyArmorRunewords.length; b++) {
+            if (bodyArmorRunewords[b].ladder === false) {
+                let bodyArmorNlName = document.createElement("h2");
+                let bodyArmorNlBases = document.createElement("div");
+                bodyArmorNlBases.style.opacity = "0.33";
+                let bodyArmorNlRunes = document.createElement("div");
+                bodyArmorNlRunes.style.color = "#b4a372";
+                let bodyArmorNlLevel = document.createElement("div");
+                let bodyArmorNlStats = document.createElement("div");
+                bodyArmorNlStats.style.color = "#595ed8";
+                bodyArmorNlStats.style.fontSize = ".75rem";
+
+                let bodyArmorNlNameCaps = bodyArmorRunewords[b].name.toUpperCase();
+                let bodyArmorNlBasesCaps = bodyArmorRunewords[b].bases.toUpperCase();
+                let bodyArmorNlRunesString = bodyArmorRunewords[b].runes.join(" + ");
+                let bodyArmorNlRunesCaps = bodyArmorNlRunesString.toUpperCase();
+                let bodyArmorNlStatsString = bodyArmorRunewords[b].stats.join("\n");
+                let bodyArmorNlStatsCaps = bodyArmorNlStatsString.toUpperCase();
+
+                bodyArmorNlName.innerText = bodyArmorNlNameCaps;
+                bodyArmorNlBases.innerText = bodyArmorNlBasesCaps;
+                bodyArmorNlRunes.innerText = bodyArmorNlRunesCaps;
+                bodyArmorNlLevel.innerText = "REQUIRED LEVEL: " + bodyArmorRunewords[b].level;
+                bodyArmorNlStats.innerText = bodyArmorNlStatsCaps;
+
+                runewordsList.appendChild(bodyArmorNlName);
+                runewordsList.appendChild(bodyArmorNlBases);
+                runewordsList.appendChild(bodyArmorNlRunes);
+                runewordsList.appendChild(bodyArmorNlLevel);
+                runewordsList.appendChild(bodyArmorNlStats);
+                runewordsList.appendChild(document.createElement("br"));
+            }
+        }
     } else if (nonLadderCheck.checked && runewordsFilter.innerText == "Shields") {
-        console.log("SHIELDS CHECKED")
+        runewordsList.innerHTML = "";
+
+        for (let s = 0; s < shieldRunewords.length; s++) {
+            if (shieldRunewords[s].ladder === false) {
+                let shieldNlName = document.createElement("h2");
+                let shieldNlBases = document.createElement("div");
+                shieldNlBases.style.opacity = "0.33";
+                let shieldNlRunes = document.createElement("div");
+                shieldNlRunes.style.color = "#b4a372";
+                let shieldNlLevel = document.createElement("div");
+                let shieldNlStats = document.createElement("div");
+                shieldNlStats.style.color = "#595ed8";
+                shieldNlStats.style.fontSize = ".75rem";
+
+                let shieldNlNameCaps = shieldRunewords[s].name.toUpperCase();
+                let shieldNlBasesCaps = shieldRunewords[s].bases.toUpperCase();
+                let shieldNlRunesString = shieldRunewords[s].runes.join(" + ");
+                let shieldNlRunesCaps = shieldNlRunesString.toUpperCase();
+                let shieldNlStatsString = shieldRunewords[s].stats.join("\n");
+                let shieldNlStatsCaps = shieldNlStatsString.toUpperCase();
+
+                shieldNlName.innerText = shieldNlNameCaps;
+                shieldNlBases.innerText = shieldNlBasesCaps;
+                shieldNlRunes.innerText = shieldNlRunesCaps;
+                shieldNlLevel.innerText = "REQUIRED LEVEL: " + shieldRunewords[s].level;
+                shieldNlStats.innerText = shieldNlStatsCaps;
+
+                runewordsList.appendChild(shieldNlName);
+                runewordsList.appendChild(shieldNlBases);
+                runewordsList.appendChild(shieldNlRunes);
+                runewordsList.appendChild(shieldNlLevel);
+                runewordsList.appendChild(shieldNlStats);
+                runewordsList.appendChild(document.createElement("br"));
+            }
+        }
     } else {
-        console.log("UNCHECKED")
+        runewordsList.innerHTML = "";
+
+        if (nonLadderCheck.checked === false && runewordsFilter.innerText == "Helms") {
+            filterHelms();
+        } else if (nonLadderCheck.checked === false && runewordsFilter.innerText == "Weapons") {
+            filterWeapons();
+        } else if (nonLadderCheck.checked === false && runewordsFilter.innerText == "Body Armor") {
+            filterBodyArmor();
+        } else if (nonLadderCheck.checked === false && runewordsFilter.innerText == "Shields") {
+            filterShields();
+        } else {
+            for (let u = 0; u < foundRunewords.length; u++) {
+                let allName = document.createElement("h2");
+                let allBases = document.createElement("div");
+                allBases.style.opacity = "0.33";
+                let allRunes = document.createElement("div");
+                allRunes.style.color = "#b4a372";
+                let allLevel = document.createElement("div");
+                let allStats = document.createElement("div");
+                allStats.style.color = "#595ed8";
+                allStats.style.fontSize = ".75rem";
+
+                let allNameCaps = foundRunewords[u].name.toUpperCase();
+                let allBasesCaps = foundRunewords[u].bases.toUpperCase();
+                let allRunesString = foundRunewords[u].runes.join(" + ");
+                let allRunesCaps = allRunesString.toUpperCase();
+                let allStatsString = foundRunewords[u].stats.join("\n");
+                let allStatsCaps = allStatsString.toUpperCase();
+
+                allName.innerText = allNameCaps;
+                allBases.innerText = allBasesCaps;
+                allRunes.innerText = allRunesCaps;
+                allLevel.innerText = "REQUIRED LEVEL: " + foundRunewords[u].level;
+                allStats.innerText = allStatsCaps;
+
+                runewordsList.appendChild(allName);
+                runewordsList.appendChild(allBases);
+                runewordsList.appendChild(allRunes);
+                runewordsList.appendChild(allLevel);
+                runewordsList.appendChild(allStats);
+                runewordsList.appendChild(document.createElement("br"));
+            }
+        }
     }
 }
 
@@ -1932,6 +2150,7 @@ $('.dropdown-menu a').click(function () {
 /*Off-Canvas Menu*/
 function openOffcanvas() {
     document.getElementById("myOffcanvas").classList.add("offCanvasWidth");
+    document.getElementById("runewords-nav").style.opacity = "100";
 }
 function openNav() {
     document.getElementById("myCanvasNav").style.width = "100%";
@@ -1944,4 +2163,5 @@ function closeOffcanvas() {
     runewordsList.innerHTML = "";
     runewordsFilter.innerText = "Show All";
     nonLadderCheck.checked = false;
+    document.getElementById("runewords-nav").style.opacity = "0";;
 }

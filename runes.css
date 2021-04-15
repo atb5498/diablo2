@@ -27,7 +27,6 @@
     background-color: transparent;
     border-bottom: none;
     opacity: 100%;
-    /* text-shadow: 0 0 5px white; */
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -39,7 +38,7 @@
 }
 
 .rune-img {
-    width: 60px;
+    width: 50px;
 }
 
 .rune {

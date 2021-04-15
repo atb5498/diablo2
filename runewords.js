@@ -1,3 +1,5 @@
+let selectAllCheck = document.querySelector(".select-all-check");
+let selectAllBtn = document.getElementById("select-all-btn");
 let runeBtnChecks = document.querySelectorAll(".rune-btn-check");
 let runewordsList = document.getElementById("runewords-list");
 let runewordsFilter = document.getElementById("runewords-filter");
@@ -1557,8 +1559,6 @@ let runewords = [
 
 /*Select All Runes Button*/
 function selectAllRunes(source) {
-    let selectAllCheck = document.querySelector(".select-all-check");
-    let selectAllBtn = document.getElementById("select-all-btn");
     for (let i = 0; i < runeBtnChecks.length; i++) {
         if (runeBtnChecks[i] != source) {
             runeBtnChecks[i].checked = source.checked;

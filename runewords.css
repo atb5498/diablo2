@@ -37,18 +37,17 @@
 }
 
 #select-all-outline {
-    width: 116.5px;
+    width: 116.6px;
 }
 
 #select-all-btn {
-    height: 45px;
     line-height: 45px;
     font-family: exocet, serif;
     font-size: .75rem;
 }
 
 #runewords-btns {
-    width: 290.67px;
+    width: 313px;
     margin-top: 25px;
     margin-right: auto;
     margin-left: auto;

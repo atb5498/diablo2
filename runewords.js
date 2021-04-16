@@ -2273,3 +2273,8 @@ function closeOffcanvas() {
     nonLadderCheck.checked = false;
     document.getElementById("runewords-nav").style.opacity = "0";;
 }
+
+function restSelectAll() {
+    selectAllCheck.checked = false;
+    selectAllBtn.innerText = "SELECT ALL";
+}

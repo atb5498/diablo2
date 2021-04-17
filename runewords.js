@@ -1,9 +1,79 @@
+let btncheck1 = document.getElementById("btncheck1");
+let checked1 = JSON.parse(localStorage.getItem("btncheck1"));
+let btncheck2 = document.getElementById("btncheck2");
+let checked2 = JSON.parse(localStorage.getItem("btncheck2"));
+let btncheck3 = document.getElementById("btncheck3");
+let checked3 = JSON.parse(localStorage.getItem("btncheck3"));
+let btncheck4 = document.getElementById("btncheck4");
+let checked4 = JSON.parse(localStorage.getItem("btncheck4"));
+let btncheck5 = document.getElementById("btncheck5");
+let checked5 = JSON.parse(localStorage.getItem("btncheck5"));
+let btncheck6 = document.getElementById("btncheck6");
+let checked6 = JSON.parse(localStorage.getItem("btncheck6"));
+let btncheck7 = document.getElementById("btncheck7");
+let checked7 = JSON.parse(localStorage.getItem("btncheck7"));
+let btncheck8 = document.getElementById("btncheck8");
+let checked8 = JSON.parse(localStorage.getItem("btncheck8"));
+let btncheck9 = document.getElementById("btncheck9");
+let checked9 = JSON.parse(localStorage.getItem("btncheck9"));
+let btncheck10 = document.getElementById("btncheck10");
+let checked10 = JSON.parse(localStorage.getItem("btncheck10"));
+let btncheck11 = document.getElementById("btncheck11");
+let checked11 = JSON.parse(localStorage.getItem("btncheck11"));
+let btncheck12 = document.getElementById("btncheck12");
+let checked12 = JSON.parse(localStorage.getItem("btncheck12"));
+let btncheck13 = document.getElementById("btncheck13");
+let checked13 = JSON.parse(localStorage.getItem("btncheck13"));
+let btncheck14 = document.getElementById("btncheck14");
+let checked14 = JSON.parse(localStorage.getItem("btncheck14"));
+let btncheck15 = document.getElementById("btncheck15");
+let checked15 = JSON.parse(localStorage.getItem("btncheck15"));
+let btncheck16 = document.getElementById("btncheck16");
+let checked16 = JSON.parse(localStorage.getItem("btncheck16"));
+let btncheck17 = document.getElementById("btncheck17");
+let checked17 = JSON.parse(localStorage.getItem("btncheck17"));
+let btncheck18 = document.getElementById("btncheck18");
+let checked18 = JSON.parse(localStorage.getItem("btncheck18"));
+let btncheck19 = document.getElementById("btncheck19");
+let checked19 = JSON.parse(localStorage.getItem("btncheck19"));
+let btncheck20 = document.getElementById("btncheck20");
+let checked20 = JSON.parse(localStorage.getItem("btncheck20"));
+let btncheck21 = document.getElementById("btncheck21");
+let checked21 = JSON.parse(localStorage.getItem("btncheck21"));
+let btncheck22 = document.getElementById("btncheck22");
+let checked22 = JSON.parse(localStorage.getItem("btncheck22"));
+let btncheck23 = document.getElementById("btncheck23");
+let checked23 = JSON.parse(localStorage.getItem("btncheck23"));
+let btncheck24 = document.getElementById("btncheck24");
+let checked24 = JSON.parse(localStorage.getItem("btncheck24"));
+let btncheck25 = document.getElementById("btncheck25");
+let checked25 = JSON.parse(localStorage.getItem("btncheck25"));
+let btncheck26 = document.getElementById("btncheck26");
+let checked26 = JSON.parse(localStorage.getItem("btncheck26"));
+let btncheck27 = document.getElementById("btncheck27");
+let checked27 = JSON.parse(localStorage.getItem("btncheck27"));
+let btncheck28 = document.getElementById("btncheck28");
+let checked28 = JSON.parse(localStorage.getItem("btncheck28"));
+let btncheck29 = document.getElementById("btncheck29");
+let checked29 = JSON.parse(localStorage.getItem("btncheck29"));
+let btncheck30 = document.getElementById("btncheck30");
+let checked30 = JSON.parse(localStorage.getItem("btncheck30"));
+let btncheck31 = document.getElementById("btncheck31");
+let checked31 = JSON.parse(localStorage.getItem("btncheck31"));
+let btncheck32 = document.getElementById("btncheck32");
+let checked32 = JSON.parse(localStorage.getItem("btncheck32"));
+let btncheck33 = document.getElementById("btncheck33");
+let checked33 = JSON.parse(localStorage.getItem("btncheck33"));
+let btncheck34 = document.getElementById("btncheck34");
+let checked34 = JSON.parse(localStorage.getItem("btncheck34"));
+
 let selectAllCheck = document.querySelector(".select-all-check");
 let selectAllBtn = document.getElementById("select-all-btn");
 let runeBtnChecks = document.querySelectorAll(".rune-btn-check");
 let runewordsList = document.getElementById("runewords-list");
 let runewordsFilter = document.getElementById("runewords-filter");
 let nonLadderCheck = document.getElementById("non-ladder-check");
+
 let selectedRunes = [];
 let foundRunewords = [];
 let helmRunewords = [];
@@ -1555,9 +1625,8 @@ let runewords = [
         ],
         ladder: false
     }
-]
+];
 
-/*Select All Runes Button*/
 function selectAllRunes(source) {
     for (let i = 0; i < runeBtnChecks.length; i++) {
         if (runeBtnChecks[i] != source) {
@@ -2253,7 +2322,7 @@ function nonLadderToggle() {
 /*Displays Selected Runeword Filter*/
 $('.dropdown-menu a').click(function () {
     $('#runewords-filter').text($(this).text());
-});
+})
 
 /*Off-Canvas Menu*/
 function openOffcanvas() {
@@ -2271,10 +2340,89 @@ function closeOffcanvas() {
     runewordsList.innerHTML = "";
     runewordsFilter.innerText = "Show All";
     nonLadderCheck.checked = false;
-    document.getElementById("runewords-nav").style.opacity = "0";;
+    document.getElementById("runewords-nav").style.opacity = "0";
 }
 
-function restSelectAll() {
+function resetSelectAll() {
     selectAllCheck.checked = false;
     selectAllBtn.innerText = "SELECT ALL";
 }
+
+$(".rune-btn-check").change(function () {
+    if ($(".rune-btn-check:not(:checked)").length == 0) {
+        selectAllCheck.checked = true;
+        selectAllBtn.innerText = "SELECT NONE";
+    }
+});
+
+function save() {
+    localStorage.setItem("btncheck1", btncheck1.checked);
+    localStorage.setItem("btncheck2", btncheck2.checked);
+    localStorage.setItem("btncheck3", btncheck3.checked);
+    localStorage.setItem("btncheck4", btncheck4.checked);
+    localStorage.setItem("btncheck5", btncheck5.checked);
+    localStorage.setItem("btncheck6", btncheck6.checked);
+    localStorage.setItem("btncheck7", btncheck7.checked);
+    localStorage.setItem("btncheck8", btncheck8.checked);
+    localStorage.setItem("btncheck9", btncheck9.checked);
+    localStorage.setItem("btncheck10", btncheck10.checked);
+    localStorage.setItem("btncheck11", btncheck11.checked);
+    localStorage.setItem("btncheck12", btncheck12.checked);
+    localStorage.setItem("btncheck13", btncheck13.checked);
+    localStorage.setItem("btncheck14", btncheck14.checked);
+    localStorage.setItem("btncheck15", btncheck15.checked);
+    localStorage.setItem("btncheck16", btncheck16.checked);
+    localStorage.setItem("btncheck17", btncheck17.checked);
+    localStorage.setItem("btncheck18", btncheck18.checked);
+    localStorage.setItem("btncheck19", btncheck19.checked);
+    localStorage.setItem("btncheck20", btncheck20.checked);
+    localStorage.setItem("btncheck21", btncheck21.checked);
+    localStorage.setItem("btncheck22", btncheck22.checked);
+    localStorage.setItem("btncheck23", btncheck23.checked);
+    localStorage.setItem("btncheck24", btncheck24.checked);
+    localStorage.setItem("btncheck25", btncheck25.checked);
+    localStorage.setItem("btncheck26", btncheck26.checked);
+    localStorage.setItem("btncheck27", btncheck27.checked);
+    localStorage.setItem("btncheck28", btncheck28.checked);
+    localStorage.setItem("btncheck29", btncheck29.checked);
+    localStorage.setItem("btncheck30", btncheck30.checked);
+    localStorage.setItem("btncheck31", btncheck31.checked);
+    localStorage.setItem("btncheck32", btncheck32.checked);
+    localStorage.setItem("btncheck33", btncheck33.checked);
+    localStorage.setItem("btncheck34", btncheck34.checked);
+}
+
+btncheck1.checked = checked1;
+btncheck2.checked = checked2;
+btncheck3.checked = checked3;
+btncheck4.checked = checked4;
+btncheck5.checked = checked5;
+btncheck6.checked = checked6;
+btncheck7.checked = checked7;
+btncheck8.checked = checked8;
+btncheck9.checked = checked9;
+btncheck10.checked = checked10;
+btncheck11.checked = checked11;
+btncheck12.checked = checked12;
+btncheck13.checked = checked13;
+btncheck14.checked = checked14;
+btncheck15.checked = checked15;
+btncheck16.checked = checked16;
+btncheck17.checked = checked17;
+btncheck18.checked = checked18;
+btncheck19.checked = checked19;
+btncheck20.checked = checked20;
+btncheck21.checked = checked21;
+btncheck22.checked = checked22;
+btncheck23.checked = checked23;
+btncheck24.checked = checked24;
+btncheck25.checked = checked25;
+btncheck26.checked = checked26;
+btncheck27.checked = checked27;
+btncheck28.checked = checked28;
+btncheck29.checked = checked29;
+btncheck30.checked = checked30;
+btncheck31.checked = checked31;
+btncheck32.checked = checked32;
+btncheck33.checked = checked33;
+btncheck34.checked = checked34;

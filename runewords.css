@@ -86,10 +86,6 @@
     padding-top: 60px;
 }
 
-.offcanvas a {
-    font-weight: bold;
-}
-
 .offcanvas .closeOffcanvas {
     position: absolute;
     top: 0;
@@ -113,6 +109,7 @@
 
 #runewords-filter, #non-ladder {
     color: white;
+    font-weight: bold;
 }
 
 #runewords-list {

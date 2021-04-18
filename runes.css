@@ -52,17 +52,32 @@
 }
 
 .rune-recipe-img {
-    width: 40px;
+    width: 35px;
     opacity: 50%;
 }
 
 .topaz {
-    font-weight: bold;
-    color: yellow;
+    color: rgb(255, 255, 85);
 }
 
-.rune-recipe-gem-img {
-    width: 40px;
+.amethyst {
+    color: rgb(255, 85, 255);
+}
+
+.saphire {
+    color: rgb(85, 85, 255);
+}
+
+.ruby {
+    color: rgb(255, 85, 85);
+}
+
+.emerald {
+    color: rgb(85, 255, 85);
+}
+
+.diamond {
+    color: lightsteelblue;
 }
 
 .rune-item-type {
@@ -83,9 +98,9 @@
     font-family: exocet, serif;
 }
 
-#low-runes .accordion-body {
+/* #low-runes .accordion-body {
     color: #9E8BBB;
-}
+} */
 
 #mid-runes {
     border-left: 25px solid #eca72c;
@@ -96,9 +111,9 @@
     font-family: exocet, serif;
 }
 
-#mid-runes .accordion-body {
+/* #mid-runes .accordion-body {
     color: #eca72c;
-}
+} */
 
 #high-runes {
     border-left: 25px solid #ee5622;
@@ -109,15 +124,20 @@
     font-family: exocet, serif;
 }
 
-#high-runes .accordion-body {
+/* #high-runes .accordion-body {
     color: #ee5622;
-}
+} */
 
 @media only screen and (max-width: 576px) {
     .accordion-body {
         font-size: .75rem;
+        padding: 0;
+    }
+    .rune-recipe {
+        padding: 0;
     }
     .rune-required-level {
         font-size: 1rem;
+        padding-bottom: 16px;
     }
 }

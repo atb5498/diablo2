@@ -51,7 +51,7 @@
     text-align: center;
 }
 
-.rune-recipe-img {
+.rune-recipe img {
     width: 35px;
     opacity: 50%;
 }
@@ -98,10 +98,6 @@
     font-family: exocet, serif;
 }
 
-/* #low-runes .accordion-body {
-    color: #9E8BBB;
-} */
-
 #mid-runes {
     border-left: 25px solid #eca72c;
 }
@@ -111,10 +107,6 @@
     font-family: exocet, serif;
 }
 
-/* #mid-runes .accordion-body {
-    color: #eca72c;
-} */
-
 #high-runes {
     border-left: 25px solid #ee5622;
 }
@@ -123,10 +115,6 @@
     color: #ee5622;
     font-family: exocet, serif;
 }
-
-/* #high-runes .accordion-body {
-    color: #ee5622;
-} */
 
 @media only screen and (max-width: 576px) {
     .accordion-body {

@@ -57,6 +57,21 @@
     font-family: exocet, serif;
 }
 
+#save-btn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+#save-btn:focus {
+    background-color: transparent;
+    transition: all 3s ease;
+}
+
+#save-btn:active {
+    background-color: white;
+    color: #000;
+}
+
 .overlay3 {
     height: 100%;
     width: 0;

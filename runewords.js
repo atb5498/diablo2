@@ -1701,6 +1701,12 @@ function searchRunewords() {
             runewordsList.appendChild(document.createElement("br"));
         }
     }
+
+    if (foundRunewords.length == 0) {
+        let nothingFound = document.createElement("h2");
+        nothingFound.innerText = "NO RUNEWORDS FOUND";
+        runewordsList.appendChild(nothingFound);
+    }
 }
 
 function filterHelms() {
@@ -1711,6 +1717,12 @@ function filterHelms() {
         if (foundRunewords[i].type.includes("helms")) {
             helmRunewords.push(foundRunewords[i]);
         }
+    }
+
+    if (helmRunewords.length == 0) {
+        let nothingFound = document.createElement("h2");
+        nothingFound.innerText = "NO RUNEWORDS FOUND";
+        runewordsList.appendChild(nothingFound);
     }
 
     if (nonLadderCheck.checked) {
@@ -1792,6 +1804,12 @@ function filterWeapons() {
         }
     }
 
+    if (weaponRunewords.length == 0) {
+        let nothingFound = document.createElement("h2");
+        nothingFound.innerText = "NO RUNEWORDS FOUND";
+        runewordsList.appendChild(nothingFound);
+    }
+
     if (nonLadderCheck.checked) {
         for (let w = 0; w < weaponRunewords.length; w++) {
             if (weaponRunewords[w].ladder === false) {
@@ -1869,6 +1887,12 @@ function filterBodyArmor() {
         if (foundRunewords[i].type.includes("body armor")) {
             bodyArmorRunewords.push(foundRunewords[i]);
         }
+    }
+
+    if (bodyArmorRunewords.length == 0) {
+        let nothingFound = document.createElement("h2");
+        nothingFound.innerText = "NO RUNEWORDS FOUND";
+        runewordsList.appendChild(nothingFound);
     }
 
     if (nonLadderCheck.checked) {
@@ -1950,6 +1974,12 @@ function filterShields() {
         }
     }
 
+    if (shieldRunewords.length == 0) {
+        let nothingFound = document.createElement("h2");
+        nothingFound.innerText = "NO RUNEWORDS FOUND";
+        runewordsList.appendChild(nothingFound);
+    }
+
     if (nonLadderCheck.checked) {
         for (let s = 0; s < shieldRunewords.length; s++) {
             if (shieldRunewords[s].ladder === false) {
@@ -2021,6 +2051,12 @@ function filterShields() {
 
 function filterShowAll() {
     runewordsList.innerHTML = "";
+
+    if (foundRunewords.length == 0) {
+        let nothingFound = document.createElement("h2");
+        nothingFound.innerText = "NO RUNEWORDS FOUND";
+        runewordsList.appendChild(nothingFound);
+    }
 
     if (nonLadderCheck.checked) {
         for (let i = 0; i < foundRunewords.length; i++) {
@@ -2095,181 +2131,211 @@ function nonLadderToggle() {
     if (nonLadderCheck.checked && runewordsFilter.innerText == "Show All") {
         runewordsList.innerHTML = "";
 
-        for (let i = 0; i < foundRunewords.length; i++) {
-            if (foundRunewords[i].ladder === false) {
-                let allNlName = document.createElement("h2");
-                let allNlBases = document.createElement("div");
-                allNlBases.style.opacity = "0.33";
-                let allNlRunes = document.createElement("div");
-                allNlRunes.style.color = "#b4a372";
-                let allNlLevel = document.createElement("div");
-                let allNlStats = document.createElement("div");
-                allNlStats.style.color = "#595ed8";
-                allNlStats.style.fontSize = ".75rem";
+        if (foundRunewords.length == 0) {
+            let nothingFound = document.createElement("h2");
+            nothingFound.innerText = "NO RUNEWORDS FOUND";
+            runewordsList.appendChild(nothingFound);
+        } else {
+            for (let i = 0; i < foundRunewords.length; i++) {
+                if (foundRunewords[i].ladder === false) {
+                    let allNlName = document.createElement("h2");
+                    let allNlBases = document.createElement("div");
+                    allNlBases.style.opacity = "0.33";
+                    let allNlRunes = document.createElement("div");
+                    allNlRunes.style.color = "#b4a372";
+                    let allNlLevel = document.createElement("div");
+                    let allNlStats = document.createElement("div");
+                    allNlStats.style.color = "#595ed8";
+                    allNlStats.style.fontSize = ".75rem";
 
-                let allNlNameCaps = foundRunewords[i].name.toUpperCase();
-                let allNlBasesCaps = foundRunewords[i].bases.toUpperCase();
-                let allNlRunesString = foundRunewords[i].runes.join(" + ");
-                let allNlRunesCaps = allNlRunesString.toUpperCase();
-                let allNlStatsString = foundRunewords[i].stats.join("\n");
-                let allNlStatsCaps = allNlStatsString.toUpperCase();
+                    let allNlNameCaps = foundRunewords[i].name.toUpperCase();
+                    let allNlBasesCaps = foundRunewords[i].bases.toUpperCase();
+                    let allNlRunesString = foundRunewords[i].runes.join(" + ");
+                    let allNlRunesCaps = allNlRunesString.toUpperCase();
+                    let allNlStatsString = foundRunewords[i].stats.join("\n");
+                    let allNlStatsCaps = allNlStatsString.toUpperCase();
 
-                allNlName.innerText = allNlNameCaps;
-                allNlBases.innerText = allNlBasesCaps;
-                allNlRunes.innerText = allNlRunesCaps;
-                allNlLevel.innerText = "REQUIRED LEVEL: " + foundRunewords[i].level;
-                allNlStats.innerText = allNlStatsCaps;
+                    allNlName.innerText = allNlNameCaps;
+                    allNlBases.innerText = allNlBasesCaps;
+                    allNlRunes.innerText = allNlRunesCaps;
+                    allNlLevel.innerText = "REQUIRED LEVEL: " + foundRunewords[i].level;
+                    allNlStats.innerText = allNlStatsCaps;
 
-                runewordsList.appendChild(allNlName);
-                runewordsList.appendChild(allNlBases);
-                runewordsList.appendChild(allNlRunes);
-                runewordsList.appendChild(allNlLevel);
-                runewordsList.appendChild(allNlStats);
-                runewordsList.appendChild(document.createElement("br"));
+                    runewordsList.appendChild(allNlName);
+                    runewordsList.appendChild(allNlBases);
+                    runewordsList.appendChild(allNlRunes);
+                    runewordsList.appendChild(allNlLevel);
+                    runewordsList.appendChild(allNlStats);
+                    runewordsList.appendChild(document.createElement("br"));
+                }
             }
         }
     } else if (nonLadderCheck.checked && runewordsFilter.innerText == "Helms") {
         runewordsList.innerHTML = "";
 
-        for (let h = 0; h < helmRunewords.length; h++) {
-            if (helmRunewords[h].ladder === false) {
-                let helmNlName = document.createElement("h2");
-                let helmNlBases = document.createElement("div");
-                helmNlBases.style.opacity = "0.33";
-                let helmNlRunes = document.createElement("div");
-                helmNlRunes.style.color = "#b4a372";
-                let helmNlLevel = document.createElement("div");
-                let helmNlStats = document.createElement("div");
-                helmNlStats.style.color = "#595ed8";
-                helmNlStats.style.fontSize = ".75rem";
+        if (helmRunewords.length == 0) {
+            let nothingFound = document.createElement("h2");
+            nothingFound.innerText = "NO RUNEWORDS FOUND";
+            runewordsList.appendChild(nothingFound);
+        } else {
+            for (let h = 0; h < helmRunewords.length; h++) {
+                if (helmRunewords[h].ladder === false) {
+                    let helmNlName = document.createElement("h2");
+                    let helmNlBases = document.createElement("div");
+                    helmNlBases.style.opacity = "0.33";
+                    let helmNlRunes = document.createElement("div");
+                    helmNlRunes.style.color = "#b4a372";
+                    let helmNlLevel = document.createElement("div");
+                    let helmNlStats = document.createElement("div");
+                    helmNlStats.style.color = "#595ed8";
+                    helmNlStats.style.fontSize = ".75rem";
 
-                let helmNlNameCaps = helmRunewords[h].name.toUpperCase();
-                let helmNlBasesCaps = helmRunewords[h].bases.toUpperCase();
-                let helmNlRunesString = helmRunewords[h].runes.join(" + ");
-                let helmNlRunesCaps = helmNlRunesString.toUpperCase();
-                let helmNlStatsString = helmRunewords[h].stats.join("\n");
-                let helmNlStatsCaps = helmNlStatsString.toUpperCase();
+                    let helmNlNameCaps = helmRunewords[h].name.toUpperCase();
+                    let helmNlBasesCaps = helmRunewords[h].bases.toUpperCase();
+                    let helmNlRunesString = helmRunewords[h].runes.join(" + ");
+                    let helmNlRunesCaps = helmNlRunesString.toUpperCase();
+                    let helmNlStatsString = helmRunewords[h].stats.join("\n");
+                    let helmNlStatsCaps = helmNlStatsString.toUpperCase();
 
-                helmNlName.innerText = helmNlNameCaps;
-                helmNlBases.innerText = helmNlBasesCaps;
-                helmNlRunes.innerText = helmNlRunesCaps;
-                helmNlLevel.innerText = "REQUIRED LEVEL: " + helmRunewords[h].level;
-                helmNlStats.innerText = helmNlStatsCaps;
+                    helmNlName.innerText = helmNlNameCaps;
+                    helmNlBases.innerText = helmNlBasesCaps;
+                    helmNlRunes.innerText = helmNlRunesCaps;
+                    helmNlLevel.innerText = "REQUIRED LEVEL: " + helmRunewords[h].level;
+                    helmNlStats.innerText = helmNlStatsCaps;
 
-                runewordsList.appendChild(helmNlName);
-                runewordsList.appendChild(helmNlBases);
-                runewordsList.appendChild(helmNlRunes);
-                runewordsList.appendChild(helmNlLevel);
-                runewordsList.appendChild(helmNlStats);
-                runewordsList.appendChild(document.createElement("br"));
+                    runewordsList.appendChild(helmNlName);
+                    runewordsList.appendChild(helmNlBases);
+                    runewordsList.appendChild(helmNlRunes);
+                    runewordsList.appendChild(helmNlLevel);
+                    runewordsList.appendChild(helmNlStats);
+                    runewordsList.appendChild(document.createElement("br"));
+                }
             }
         }
     } else if (nonLadderCheck.checked && runewordsFilter.innerText == "Weapons") {
         runewordsList.innerHTML = "";
 
-        for (let w = 0; w < weaponRunewords.length; w++) {
-            if (weaponRunewords[w].ladder === false) {
-                let weaponNlName = document.createElement("h2");
-                let weaponNlBases = document.createElement("div");
-                weaponNlBases.style.opacity = "0.33";
-                let weaponNlRunes = document.createElement("div");
-                weaponNlRunes.style.color = "#b4a372";
-                let weaponNlLevel = document.createElement("div");
-                let weaponNlStats = document.createElement("div");
-                weaponNlStats.style.color = "#595ed8";
-                weaponNlStats.style.fontSize = ".75rem";
+        if (weaponRunewords.length == 0) {
+            let nothingFound = document.createElement("h2");
+            nothingFound.innerText = "NO RUNEWORDS FOUND";
+            runewordsList.appendChild(nothingFound);
+        } else {
+            for (let w = 0; w < weaponRunewords.length; w++) {
+                if (weaponRunewords[w].ladder === false) {
+                    let weaponNlName = document.createElement("h2");
+                    let weaponNlBases = document.createElement("div");
+                    weaponNlBases.style.opacity = "0.33";
+                    let weaponNlRunes = document.createElement("div");
+                    weaponNlRunes.style.color = "#b4a372";
+                    let weaponNlLevel = document.createElement("div");
+                    let weaponNlStats = document.createElement("div");
+                    weaponNlStats.style.color = "#595ed8";
+                    weaponNlStats.style.fontSize = ".75rem";
 
-                let weaponNlNameCaps = weaponRunewords[w].name.toUpperCase();
-                let weaponNlBasesCaps = weaponRunewords[w].bases.toUpperCase();
-                let weaponNlRunesString = weaponRunewords[w].runes.join(" + ");
-                let weaponNlRunesCaps = weaponNlRunesString.toUpperCase();
-                let weaponNlStatsString = weaponRunewords[w].stats.join("\n");
-                let weaponNlStatsCaps = weaponNlStatsString.toUpperCase();
+                    let weaponNlNameCaps = weaponRunewords[w].name.toUpperCase();
+                    let weaponNlBasesCaps = weaponRunewords[w].bases.toUpperCase();
+                    let weaponNlRunesString = weaponRunewords[w].runes.join(" + ");
+                    let weaponNlRunesCaps = weaponNlRunesString.toUpperCase();
+                    let weaponNlStatsString = weaponRunewords[w].stats.join("\n");
+                    let weaponNlStatsCaps = weaponNlStatsString.toUpperCase();
 
-                weaponNlName.innerText = weaponNlNameCaps;
-                weaponNlBases.innerText = weaponNlBasesCaps;
-                weaponNlRunes.innerText = weaponNlRunesCaps;
-                weaponNlLevel.innerText = "REQUIRED LEVEL: " + weaponRunewords[w].level;
-                weaponNlStats.innerText = weaponNlStatsCaps;
+                    weaponNlName.innerText = weaponNlNameCaps;
+                    weaponNlBases.innerText = weaponNlBasesCaps;
+                    weaponNlRunes.innerText = weaponNlRunesCaps;
+                    weaponNlLevel.innerText = "REQUIRED LEVEL: " + weaponRunewords[w].level;
+                    weaponNlStats.innerText = weaponNlStatsCaps;
 
-                runewordsList.appendChild(weaponNlName);
-                runewordsList.appendChild(weaponNlBases);
-                runewordsList.appendChild(weaponNlRunes);
-                runewordsList.appendChild(weaponNlLevel);
-                runewordsList.appendChild(weaponNlStats);
-                runewordsList.appendChild(document.createElement("br"));
+                    runewordsList.appendChild(weaponNlName);
+                    runewordsList.appendChild(weaponNlBases);
+                    runewordsList.appendChild(weaponNlRunes);
+                    runewordsList.appendChild(weaponNlLevel);
+                    runewordsList.appendChild(weaponNlStats);
+                    runewordsList.appendChild(document.createElement("br"));
+                }
             }
         }
     } else if (nonLadderCheck.checked && runewordsFilter.innerText == "Body Armor") {
         runewordsList.innerHTML = "";
 
-        for (let b = 0; b < bodyArmorRunewords.length; b++) {
-            if (bodyArmorRunewords[b].ladder === false) {
-                let bodyArmorNlName = document.createElement("h2");
-                let bodyArmorNlBases = document.createElement("div");
-                bodyArmorNlBases.style.opacity = "0.33";
-                let bodyArmorNlRunes = document.createElement("div");
-                bodyArmorNlRunes.style.color = "#b4a372";
-                let bodyArmorNlLevel = document.createElement("div");
-                let bodyArmorNlStats = document.createElement("div");
-                bodyArmorNlStats.style.color = "#595ed8";
-                bodyArmorNlStats.style.fontSize = ".75rem";
+        if (bodyArmorRunewords.length == 0) {
+            let nothingFound = document.createElement("h2");
+            nothingFound.innerText = "NO RUNEWORDS FOUND";
+            runewordsList.appendChild(nothingFound);
+        } else {
+            for (let b = 0; b < bodyArmorRunewords.length; b++) {
+                if (bodyArmorRunewords[b].ladder === false) {
+                    let bodyArmorNlName = document.createElement("h2");
+                    let bodyArmorNlBases = document.createElement("div");
+                    bodyArmorNlBases.style.opacity = "0.33";
+                    let bodyArmorNlRunes = document.createElement("div");
+                    bodyArmorNlRunes.style.color = "#b4a372";
+                    let bodyArmorNlLevel = document.createElement("div");
+                    let bodyArmorNlStats = document.createElement("div");
+                    bodyArmorNlStats.style.color = "#595ed8";
+                    bodyArmorNlStats.style.fontSize = ".75rem";
 
-                let bodyArmorNlNameCaps = bodyArmorRunewords[b].name.toUpperCase();
-                let bodyArmorNlBasesCaps = bodyArmorRunewords[b].bases.toUpperCase();
-                let bodyArmorNlRunesString = bodyArmorRunewords[b].runes.join(" + ");
-                let bodyArmorNlRunesCaps = bodyArmorNlRunesString.toUpperCase();
-                let bodyArmorNlStatsString = bodyArmorRunewords[b].stats.join("\n");
-                let bodyArmorNlStatsCaps = bodyArmorNlStatsString.toUpperCase();
+                    let bodyArmorNlNameCaps = bodyArmorRunewords[b].name.toUpperCase();
+                    let bodyArmorNlBasesCaps = bodyArmorRunewords[b].bases.toUpperCase();
+                    let bodyArmorNlRunesString = bodyArmorRunewords[b].runes.join(" + ");
+                    let bodyArmorNlRunesCaps = bodyArmorNlRunesString.toUpperCase();
+                    let bodyArmorNlStatsString = bodyArmorRunewords[b].stats.join("\n");
+                    let bodyArmorNlStatsCaps = bodyArmorNlStatsString.toUpperCase();
 
-                bodyArmorNlName.innerText = bodyArmorNlNameCaps;
-                bodyArmorNlBases.innerText = bodyArmorNlBasesCaps;
-                bodyArmorNlRunes.innerText = bodyArmorNlRunesCaps;
-                bodyArmorNlLevel.innerText = "REQUIRED LEVEL: " + bodyArmorRunewords[b].level;
-                bodyArmorNlStats.innerText = bodyArmorNlStatsCaps;
+                    bodyArmorNlName.innerText = bodyArmorNlNameCaps;
+                    bodyArmorNlBases.innerText = bodyArmorNlBasesCaps;
+                    bodyArmorNlRunes.innerText = bodyArmorNlRunesCaps;
+                    bodyArmorNlLevel.innerText = "REQUIRED LEVEL: " + bodyArmorRunewords[b].level;
+                    bodyArmorNlStats.innerText = bodyArmorNlStatsCaps;
 
-                runewordsList.appendChild(bodyArmorNlName);
-                runewordsList.appendChild(bodyArmorNlBases);
-                runewordsList.appendChild(bodyArmorNlRunes);
-                runewordsList.appendChild(bodyArmorNlLevel);
-                runewordsList.appendChild(bodyArmorNlStats);
-                runewordsList.appendChild(document.createElement("br"));
+                    runewordsList.appendChild(bodyArmorNlName);
+                    runewordsList.appendChild(bodyArmorNlBases);
+                    runewordsList.appendChild(bodyArmorNlRunes);
+                    runewordsList.appendChild(bodyArmorNlLevel);
+                    runewordsList.appendChild(bodyArmorNlStats);
+                    runewordsList.appendChild(document.createElement("br"));
+                }
             }
         }
     } else if (nonLadderCheck.checked && runewordsFilter.innerText == "Shields") {
         runewordsList.innerHTML = "";
 
-        for (let s = 0; s < shieldRunewords.length; s++) {
-            if (shieldRunewords[s].ladder === false) {
-                let shieldNlName = document.createElement("h2");
-                let shieldNlBases = document.createElement("div");
-                shieldNlBases.style.opacity = "0.33";
-                let shieldNlRunes = document.createElement("div");
-                shieldNlRunes.style.color = "#b4a372";
-                let shieldNlLevel = document.createElement("div");
-                let shieldNlStats = document.createElement("div");
-                shieldNlStats.style.color = "#595ed8";
-                shieldNlStats.style.fontSize = ".75rem";
+        if (shieldRunewords.length == 0) {
+            let nothingFound = document.createElement("h2");
+            nothingFound.innerText = "NO RUNEWORDS FOUND";
+            runewordsList.appendChild(nothingFound);
+        } else {
+            for (let s = 0; s < shieldRunewords.length; s++) {
+                if (shieldRunewords[s].ladder === false) {
+                    let shieldNlName = document.createElement("h2");
+                    let shieldNlBases = document.createElement("div");
+                    shieldNlBases.style.opacity = "0.33";
+                    let shieldNlRunes = document.createElement("div");
+                    shieldNlRunes.style.color = "#b4a372";
+                    let shieldNlLevel = document.createElement("div");
+                    let shieldNlStats = document.createElement("div");
+                    shieldNlStats.style.color = "#595ed8";
+                    shieldNlStats.style.fontSize = ".75rem";
 
-                let shieldNlNameCaps = shieldRunewords[s].name.toUpperCase();
-                let shieldNlBasesCaps = shieldRunewords[s].bases.toUpperCase();
-                let shieldNlRunesString = shieldRunewords[s].runes.join(" + ");
-                let shieldNlRunesCaps = shieldNlRunesString.toUpperCase();
-                let shieldNlStatsString = shieldRunewords[s].stats.join("\n");
-                let shieldNlStatsCaps = shieldNlStatsString.toUpperCase();
+                    let shieldNlNameCaps = shieldRunewords[s].name.toUpperCase();
+                    let shieldNlBasesCaps = shieldRunewords[s].bases.toUpperCase();
+                    let shieldNlRunesString = shieldRunewords[s].runes.join(" + ");
+                    let shieldNlRunesCaps = shieldNlRunesString.toUpperCase();
+                    let shieldNlStatsString = shieldRunewords[s].stats.join("\n");
+                    let shieldNlStatsCaps = shieldNlStatsString.toUpperCase();
 
-                shieldNlName.innerText = shieldNlNameCaps;
-                shieldNlBases.innerText = shieldNlBasesCaps;
-                shieldNlRunes.innerText = shieldNlRunesCaps;
-                shieldNlLevel.innerText = "REQUIRED LEVEL: " + shieldRunewords[s].level;
-                shieldNlStats.innerText = shieldNlStatsCaps;
+                    shieldNlName.innerText = shieldNlNameCaps;
+                    shieldNlBases.innerText = shieldNlBasesCaps;
+                    shieldNlRunes.innerText = shieldNlRunesCaps;
+                    shieldNlLevel.innerText = "REQUIRED LEVEL: " + shieldRunewords[s].level;
+                    shieldNlStats.innerText = shieldNlStatsCaps;
 
-                runewordsList.appendChild(shieldNlName);
-                runewordsList.appendChild(shieldNlBases);
-                runewordsList.appendChild(shieldNlRunes);
-                runewordsList.appendChild(shieldNlLevel);
-                runewordsList.appendChild(shieldNlStats);
-                runewordsList.appendChild(document.createElement("br"));
+                    runewordsList.appendChild(shieldNlName);
+                    runewordsList.appendChild(shieldNlBases);
+                    runewordsList.appendChild(shieldNlRunes);
+                    runewordsList.appendChild(shieldNlLevel);
+                    runewordsList.appendChild(shieldNlStats);
+                    runewordsList.appendChild(document.createElement("br"));
+                }
             }
         }
     } else {
@@ -2284,36 +2350,42 @@ function nonLadderToggle() {
         } else if (nonLadderCheck.checked === false && runewordsFilter.innerText == "Shields") {
             filterShields();
         } else {
-            for (let u = 0; u < foundRunewords.length; u++) {
-                let allName = document.createElement("h2");
-                let allBases = document.createElement("div");
-                allBases.style.opacity = "0.33";
-                let allRunes = document.createElement("div");
-                allRunes.style.color = "#b4a372";
-                let allLevel = document.createElement("div");
-                let allStats = document.createElement("div");
-                allStats.style.color = "#595ed8";
-                allStats.style.fontSize = ".75rem";
+            if (foundRunewords.length == 0) {
+                let nothingFound = document.createElement("h2");
+                nothingFound.innerText = "NO RUNEWORDS FOUND";
+                runewordsList.appendChild(nothingFound);
+            } else {
+                for (let u = 0; u < foundRunewords.length; u++) {
+                    let allName = document.createElement("h2");
+                    let allBases = document.createElement("div");
+                    allBases.style.opacity = "0.33";
+                    let allRunes = document.createElement("div");
+                    allRunes.style.color = "#b4a372";
+                    let allLevel = document.createElement("div");
+                    let allStats = document.createElement("div");
+                    allStats.style.color = "#595ed8";
+                    allStats.style.fontSize = ".75rem";
 
-                let allNameCaps = foundRunewords[u].name.toUpperCase();
-                let allBasesCaps = foundRunewords[u].bases.toUpperCase();
-                let allRunesString = foundRunewords[u].runes.join(" + ");
-                let allRunesCaps = allRunesString.toUpperCase();
-                let allStatsString = foundRunewords[u].stats.join("\n");
-                let allStatsCaps = allStatsString.toUpperCase();
+                    let allNameCaps = foundRunewords[u].name.toUpperCase();
+                    let allBasesCaps = foundRunewords[u].bases.toUpperCase();
+                    let allRunesString = foundRunewords[u].runes.join(" + ");
+                    let allRunesCaps = allRunesString.toUpperCase();
+                    let allStatsString = foundRunewords[u].stats.join("\n");
+                    let allStatsCaps = allStatsString.toUpperCase();
 
-                allName.innerText = allNameCaps;
-                allBases.innerText = allBasesCaps;
-                allRunes.innerText = allRunesCaps;
-                allLevel.innerText = "REQUIRED LEVEL: " + foundRunewords[u].level;
-                allStats.innerText = allStatsCaps;
+                    allName.innerText = allNameCaps;
+                    allBases.innerText = allBasesCaps;
+                    allRunes.innerText = allRunesCaps;
+                    allLevel.innerText = "REQUIRED LEVEL: " + foundRunewords[u].level;
+                    allStats.innerText = allStatsCaps;
 
-                runewordsList.appendChild(allName);
-                runewordsList.appendChild(allBases);
-                runewordsList.appendChild(allRunes);
-                runewordsList.appendChild(allLevel);
-                runewordsList.appendChild(allStats);
-                runewordsList.appendChild(document.createElement("br"));
+                    runewordsList.appendChild(allName);
+                    runewordsList.appendChild(allBases);
+                    runewordsList.appendChild(allRunes);
+                    runewordsList.appendChild(allLevel);
+                    runewordsList.appendChild(allStats);
+                    runewordsList.appendChild(document.createElement("br"));
+                }
             }
         }
     }

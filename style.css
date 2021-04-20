@@ -19,12 +19,12 @@ body {
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/diablo-2-resurrected.jpg");
-    height: 50%;
+    height: 100%;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .hero-text {
@@ -34,7 +34,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    width: 75%;
+    width: 85%;
+}
+
+.hero-text a {
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px white;
 }
 
 #home-categories {

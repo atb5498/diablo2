@@ -4,6 +4,7 @@
 
 #runes {
     text-align: center;
+    margin-top: 25px;
 }
 
 .rune {
@@ -47,10 +48,8 @@
 }
 
 #runewords-btns {
-    width: 313px;
-    margin-top: 25px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 310px;
+    text-align: center;
 }
 
 #runewords-btns .col button {

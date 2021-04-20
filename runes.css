@@ -3,7 +3,8 @@
 }
 
 #runes-list {
-    max-width: 576px;
+    max-width: 425px;
+    margin-top: 25px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -29,6 +30,11 @@
     opacity: 100%;
 }
 
+.accordion-button:not(.collapsed) h3 {
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+}
+
 .accordion-button:not(.collapsed)::after {
     background-image: none;
 }
@@ -41,10 +47,8 @@
     width: 50px;
 }
 
-.rune {
-    font-size: calc(1.325rem + .9vw);
-    padding-top: 7px;
-    font-weight: bold;
+h3 {
+    margin-bottom: -7px;
 }
 
 .rune-recipe {

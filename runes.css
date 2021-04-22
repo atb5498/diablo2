@@ -3,7 +3,7 @@
 }
 
 #runes-list {
-    max-width: 425px;
+    max-width: 485px;
     margin-top: 25px;
     margin-right: auto;
     margin-left: auto;
@@ -41,6 +41,7 @@
 
 .accordion-body {
     font-family: exocet, serif;
+    font-size: .75rem;
 }
 
 .rune-img {
@@ -90,7 +91,8 @@ h3 {
 
 .rune-required-level {
     text-align: center;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
+    font-size: 1rem;
 }
 
 #low-runes {
@@ -122,14 +124,14 @@ h3 {
 
 @media only screen and (max-width: 576px) {
     .accordion-body {
-        font-size: .75rem;
+        /* font-size: .75rem; */
         padding: 0;
     }
     .rune-recipe {
         padding: 0;
     }
     .rune-required-level {
-        font-size: 1rem;
+        /* font-size: 1rem; */
         padding-bottom: 16px;
     }
 }

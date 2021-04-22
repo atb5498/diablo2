@@ -1,3 +1,268 @@
+let elRune = document.getElementById("el-rune");
+let eldRune = document.getElementById("eld-rune");
+let tirRune = document.getElementById("tir-rune");
+let nefRune = document.getElementById("nef-rune");
+let ethRune = document.getElementById("eth-rune");
+let ithRune = document.getElementById("ith-rune");
+let talRune = document.getElementById("tal-rune");
+let ralRune = document.getElementById("ral-rune");
+let ortRune = document.getElementById("ort-rune");
+let thulRune = document.getElementById("thul-rune");
+let amnRune = document.getElementById("amn-rune");
+let solRune = document.getElementById("sol-rune");
+let shaelRune = document.getElementById("shael-rune");
+let dolRune = document.getElementById("dol-rune");
+let helRune = document.getElementById("hel-rune");
+let ioRune = document.getElementById("io-rune");
+let lumRune = document.getElementById("lum-rune");
+let koRune = document.getElementById("ko-rune");
+let falRune = document.getElementById("fal-rune");
+let lemRune = document.getElementById("lem-rune");
+let pulRune = document.getElementById("pul-rune");
+let umRune = document.getElementById("um-rune");
+let malRune = document.getElementById("mal-rune");
+let istRune = document.getElementById("ist-rune");
+let gulRune = document.getElementById("gul-rune");
+let vexRune = document.getElementById("vex-rune");
+let ohmRune = document.getElementById("ohm-rune");
+let loRune = document.getElementById("lo-rune");
+let surRune = document.getElementById("sur-rune");
+let berRune = document.getElementById("ber-rune");
+let jahRune = document.getElementById("jah-rune");
+let chamRune = document.getElementById("cham-rune");
+let zodRune = document.getElementById("zod-rune");
+
+function elRuneOver() {
+    elRune.setAttribute("src", "assets/runes/el-rune-name.png");
+}
+function elRuneOut() {
+    elRune.setAttribute("src", "assets/runes/el-rune.png");
+}
+
+function eldRuneOver() {
+    eldRune.setAttribute("src", "assets/runes/eld-rune-name.png");
+}
+function eldRuneOut() {
+    eldRune.setAttribute("src", "assets/runes/eld-rune.png");
+}
+
+function tirRuneOver() {
+    tirRune.setAttribute("src", "assets/runes/tir-rune-name.png");
+}
+function tirRuneOut() {
+    tirRune.setAttribute("src", "assets/runes/tir-rune.png");
+}
+
+function nefRuneOver() {
+    nefRune.setAttribute("src", "assets/runes/nef-rune-name.png");
+}
+function nefRuneOut() {
+    nefRune.setAttribute("src", "assets/runes/nef-rune.png");
+}
+
+function ethRuneOver() {
+    ethRune.setAttribute("src", "assets/runes/eth-rune-name.png");
+}
+function ethRuneOut() {
+    ethRune.setAttribute("src", "assets/runes/eth-rune.png");
+}
+
+function ithRuneOver() {
+    ithRune.setAttribute("src", "assets/runes/ith-rune-name.png");
+}
+function ithRuneOut() {
+    ithRune.setAttribute("src", "assets/runes/ith-rune.png");
+}
+
+function talRuneOver() {
+    talRune.setAttribute("src", "assets/runes/tal-rune-name.png");
+}
+function talRuneOut() {
+    talRune.setAttribute("src", "assets/runes/tal-rune.png");
+}
+
+function ralRuneOver() {
+    ralRune.setAttribute("src", "assets/runes/ral-rune-name.png");
+}
+function ralRuneOut() {
+    ralRune.setAttribute("src", "assets/runes/ral-rune.png");
+}
+
+function ortRuneOver() {
+    ortRune.setAttribute("src", "assets/runes/ort-rune-name.png");
+}
+function ortRuneOut() {
+    ortRune.setAttribute("src", "assets/runes/ort-rune.png");
+}
+
+function thulRuneOver() {
+    thulRune.setAttribute("src", "assets/runes/thul-rune-name.png");
+}
+function thulRuneOut() {
+    thulRune.setAttribute("src", "assets/runes/thul-rune.png");
+}
+
+function amnRuneOver() {
+    amnRune.setAttribute("src", "assets/runes/amn-rune-name.png");
+}
+function amnRuneOut() {
+    amnRune.setAttribute("src", "assets/runes/amn-rune.png");
+}
+
+function solRuneOver() {
+    solRune.setAttribute("src", "assets/runes/sol-rune-name.png");
+}
+function solRuneOut() {
+    solRune.setAttribute("src", "assets/runes/sol-rune.png");
+}
+
+function shaelRuneOver() {
+    shaelRune.setAttribute("src", "assets/runes/shael-rune-name.png");
+}
+function shaelRuneOut() {
+    shaelRune.setAttribute("src", "assets/runes/shael-rune.png");
+}
+
+function dolRuneOver() {
+    dolRune.setAttribute("src", "assets/runes/dol-rune-name.png");
+}
+function dolRuneOut() {
+    dolRune.setAttribute("src", "assets/runes/dol-rune.png");
+}
+
+function helRuneOver() {
+    helRune.setAttribute("src", "assets/runes/hel-rune-name.png");
+}
+function helRuneOut() {
+    helRune.setAttribute("src", "assets/runes/hel-rune.png");
+}
+
+function ioRuneOver() {
+    ioRune.setAttribute("src", "assets/runes/io-rune-name.png");
+}
+function ioRuneOut() {
+    ioRune.setAttribute("src", "assets/runes/io-rune.png");
+}
+
+function lumRuneOver() {
+    lumRune.setAttribute("src", "assets/runes/lum-rune-name.png");
+}
+function lumRuneOut() {
+    lumRune.setAttribute("src", "assets/runes/lum-rune.png");
+}
+
+function koRuneOver() {
+    koRune.setAttribute("src", "assets/runes/ko-rune-name.png");
+}
+function koRuneOut() {
+    koRune.setAttribute("src", "assets/runes/ko-rune.png");
+}
+
+function falRuneOver() {
+    falRune.setAttribute("src", "assets/runes/fal-rune-name.png");
+}
+function falRuneOut() {
+    falRune.setAttribute("src", "assets/runes/fal-rune.png");
+}
+
+function lemRuneOver() {
+    lemRune.setAttribute("src", "assets/runes/lem-rune-name.png");
+}
+function lemRuneOut() {
+    lemRune.setAttribute("src", "assets/runes/lem-rune.png");
+}
+
+function pulRuneOver() {
+    pulRune.setAttribute("src", "assets/runes/pul-rune-name.png");
+}
+function pulRuneOut() {
+    pulRune.setAttribute("src", "assets/runes/pul-rune.png");
+}
+
+function umRuneOver() {
+    umRune.setAttribute("src", "assets/runes/um-rune-name.png");
+}
+function umRuneOut() {
+    umRune.setAttribute("src", "assets/runes/um-rune.png");
+}
+
+function malRuneOver() {
+    malRune.setAttribute("src", "assets/runes/mal-rune-name.png");
+}
+function malRuneOut() {
+    malRune.setAttribute("src", "assets/runes/mal-rune.png");
+}
+
+function istRuneOver() {
+    istRune.setAttribute("src", "assets/runes/ist-rune-name.png");
+}
+function istRuneOut() {
+    istRune.setAttribute("src", "assets/runes/ist-rune.png");
+}
+
+function gulRuneOver() {
+    gulRune.setAttribute("src", "assets/runes/gul-rune-name.png");
+}
+function gulRuneOut() {
+    gulRune.setAttribute("src", "assets/runes/gul-rune.png");
+}
+
+function vexRuneOver() {
+    vexRune.setAttribute("src", "assets/runes/vex-rune-name.png");
+}
+function vexRuneOut() {
+    vexRune.setAttribute("src", "assets/runes/vex-rune.png");
+}
+
+function ohmRuneOver() {
+    ohmRune.setAttribute("src", "assets/runes/ohm-rune-name.png");
+}
+function ohmRuneOut() {
+    ohmRune.setAttribute("src", "assets/runes/ohm-rune.png");
+}
+
+function loRuneOver() {
+    loRune.setAttribute("src", "assets/runes/lo-rune-name.png");
+}
+function loRuneOut() {
+    loRune.setAttribute("src", "assets/runes/lo-rune.png");
+}
+
+function surRuneOver() {
+    surRune.setAttribute("src", "assets/runes/sur-rune-name.png");
+}
+function surRuneOut() {
+    surRune.setAttribute("src", "assets/runes/sur-rune.png");
+}
+
+function berRuneOver() {
+    berRune.setAttribute("src", "assets/runes/ber-rune-name.png");
+}
+function berRuneOut() {
+    berRune.setAttribute("src", "assets/runes/ber-rune.png");
+}
+
+function jahRuneOver() {
+    jahRune.setAttribute("src", "assets/runes/jah-rune-name.png");
+}
+function jahRuneOut() {
+    jahRune.setAttribute("src", "assets/runes/jah-rune.png");
+}
+
+function chamRuneOver() {
+    chamRune.setAttribute("src", "assets/runes/cham-rune-name.png");
+}
+function chamRuneOut() {
+    chamRune.setAttribute("src", "assets/runes/cham-rune.png");
+}
+
+function zodRuneOver() {
+    zodRune.setAttribute("src", "assets/runes/zod-rune-name.png");
+}
+function zodRuneOut() {
+    zodRune.setAttribute("src", "assets/runes/zod-rune.png");
+}
+
 let btncheck1 = document.getElementById("btncheck1");
 let checked1 = JSON.parse(localStorage.getItem("btncheck1"));
 let btncheck2 = document.getElementById("btncheck2");

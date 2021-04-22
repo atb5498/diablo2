@@ -121,6 +121,10 @@
     width: 60%;
 }
 
+#runewords-nav {
+    margin-top: 25px;
+}
+
 #runewords-filter, #non-ladder {
     color: white;
     font-weight: bold;

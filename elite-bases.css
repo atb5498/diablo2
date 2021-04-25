@@ -1,3 +1,43 @@
 .hero-image {
     height: 25%;
 }
+
+#elite-bases {
+    max-width: 576px;
+}
+
+#navbar-example2 {
+    padding-right: 0 !important;
+    padding-bottom: 25px;
+    padding-left: 0 !important;
+    background-color: transparent !important;
+}
+
+#armor-nav {
+    color: white;
+}
+
+#armor-nav.active, .nav-pills .show>.nav-link {
+    background-color: transparent;
+    text-shadow: 0 0 5px white;
+    font-weight: bold;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #9E8BBB;
+}
+
+/* .armor-dropdown:active, .dropdown-item:active {
+    background-color: #9E8BBB;
+} */
+
+.armor {
+    color: #9E8BBB;
+}
+
+#elite-bases-details {
+    position: relative;
+    height: 350px;
+    overflow-y: scroll;
+    font-family: exocet, serif;
+}

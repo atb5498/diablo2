@@ -13,26 +13,44 @@
     background-color: transparent !important;
 }
 
-#armor-nav {
+#armor-nav, #weapons-nav, #shields-nav {
     color: white;
 }
 
 #armor-nav.active, .nav-pills .show>.nav-link {
-    background-color: transparent;
-    text-shadow: 0 0 5px white;
-    font-weight: bold;
-}
-
-.dropdown-item.active, .dropdown-item:active {
     background-color: #9E8BBB;
 }
 
-/* .armor-dropdown:active, .dropdown-item:active {
+.armor-dropdown.active, .armor-dropdown:active {
     background-color: #9E8BBB;
-} */
+}
+
+#weapons-nav.active, .nav-pills .show>.nav-link {
+    background-color: #eca72c;
+}
+
+.weapons-dropdown.active, .weapons-dropdown:active {
+    background-color: #eca72c;
+}
+
+#shields-nav.active, .nav-pills .show>.nav-link {
+    background-color: #ee5622;
+}
+
+.shields-dropdown.active, .shields-dropdown:active {
+    background-color: #ee5622;
+}
 
 .armor {
     color: #9E8BBB;
+}
+
+.weapons {
+    color: #eca72c;
+}
+
+.shields {
+    color: #ee5622;
 }
 
 #elite-bases-details {

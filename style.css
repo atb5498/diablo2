@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #221E22;
+    background-image: url("assets/dark_wall2.png");
     height: 100%;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
@@ -24,7 +24,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .hero-text {
@@ -38,9 +38,22 @@ body {
 }
 
 .hero-text a {
-    font-weight: bold;
     color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.hero-text a:hover {
     text-shadow: 0 0 5px white;
+    font-weight: bold;
+}
+
+.hero-line {
+    background-color: white;
+    width: 50px;
+    height: 4px;
+    margin: 10px auto 15px auto;
 }
 
 #home-categories {

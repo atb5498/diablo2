@@ -1,11 +1,13 @@
 .hero-image {
-    height: 25%;
+    height: 35%;
+    background-position: center;
 }
 
 #runes-list {
-    max-width: 485px;
+    max-width: 576px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 75px;
 }
 
 .accordion-flush .accordion-button {
@@ -40,11 +42,11 @@
 
 .accordion-body {
     font-family: exocet, serif;
-    font-size: .75rem;
+    font-size: 1rem;
 }
 
 .rune-img {
-    width: 50px;
+    width: 55px;
 }
 
 h3 {
@@ -56,7 +58,7 @@ h3 {
 }
 
 .rune-recipe img {
-    width: 35px;
+    width: 40px;
     opacity: 50%;
 }
 
@@ -90,16 +92,15 @@ h3 {
 
 .rune-required-level {
     text-align: center;
-    /* font-size: 1.25rem; */
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 #low-runes {
-    border-left: 25px solid #745B9A;
+    border-left: 25px solid #6A538D;
 }
 
 #low-runes h2 {
-    color: #9E8BBB;
+    color: #6A538D;
     font-family: exocet, serif;
 }
 
@@ -123,14 +124,14 @@ h3 {
 
 @media only screen and (max-width: 576px) {
     .accordion-body {
-        /* font-size: .75rem; */
+        font-size: .75rem;
         padding: 0;
     }
     .rune-recipe {
         padding: 0;
     }
     .rune-required-level {
-        /* font-size: 1rem; */
+        font-size: 1rem;
         padding-bottom: 16px;
     }
 }

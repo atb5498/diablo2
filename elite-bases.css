@@ -1,5 +1,6 @@
 .hero-image {
-    height: 25%;
+    height: 35%;
+    background-position: center;
 }
 
 #elite-bases {
@@ -18,11 +19,11 @@
 }
 
 #armor-nav.active, .nav-pills .show>.nav-link {
-    background-color: #9E8BBB;
+    background-color: #6A538D;
 }
 
 .armor-dropdown.active, .armor-dropdown:active {
-    background-color: #9E8BBB;
+    background-color: #6A538D;
 }
 
 #weapons-nav.active, .nav-pills .show>.nav-link {
@@ -42,7 +43,7 @@
 }
 
 .armor {
-    color: #9E8BBB;
+    color: #6A538D;
 }
 
 .weapons {

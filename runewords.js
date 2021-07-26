@@ -902,7 +902,7 @@ let runewords = [
         name: "Call To Arms",
         bases: "Weapons",
         type: ["weapons"],
-        runes: ["Dol", "Um", "Ber", "Ist"],
+        runes: ["Amn", "Ral", "Mal", "Ist", "Ohm"],
         level: 57,
         stats: [
             "+1 To All Skills",
@@ -995,7 +995,7 @@ let runewords = [
             "+40% Faster Cast Rate",
             "+75% Damage To Demons",
             "+100 To Attack Rating Against Demons",
-            "Adds 3-14 Cold Damage, 3 sec. Duration (Normal)",
+            "Adds 3-14 Cold Damage",
             "7% Mana Stolen Per Hit",
             "+10 To Dexterity",
             "Replenish Life +20",
@@ -1217,7 +1217,7 @@ let runewords = [
         stats: [
             "+40% Faster Hit Recovery",
             "+10-20% Enhanced Damage",
-            "Adds 37-133 Cold Damage 2 sec. Duration (Normal)",
+            "Adds 37-133 Cold Damage",
             "15% Chance of Crushing Blow",
             "33% Chance of Open Wounds",
             "+150-200% Enhanced Defense",
@@ -1485,8 +1485,8 @@ let runewords = [
     },
     {
         name: "Smoke",
-        bases: "Shields",
-        type: ["shields"],
+        bases: "Body Armor",
+        type: ["body armor"],
         runes: ["Nef", "Lum"],
         level: 37,
         stats: [
@@ -1502,7 +1502,7 @@ let runewords = [
     },
     {
         name: "White",
-        bases: "Wand",
+        bases: "Wands",
         type: ["weapons"],
         runes: ["Dol", "Io"],
         level: 35,
@@ -1916,7 +1916,7 @@ function removeAllRunes(array, elem) {
 function searchRunewords() {
     foundRunewords = [];
 
-    /*Adds selected runes to an array and removes unselected runes*/
+    /* Adds selected runes to an array and removes unselected runes */
     runeBtnChecks.forEach(function (runeBtnCheck) {
         if (runeBtnCheck.checked) {
             selectedRunes.push(runeBtnCheck.value);
@@ -1925,12 +1925,12 @@ function searchRunewords() {
         }
     })
 
-    /*Removes duplicates from the array of selected runes*/
+    /* Removes duplicates from the array of selected runes */
     let selectedRunesNoDupes = selectedRunes.filter(function (selectedRune, index) {
         return selectedRunes.indexOf(selectedRune) === index;
     })
 
-    /*Finds all runewords that contain selected runes*/
+    /* Finds all runewords that contain selected runes */
     for (let i = 0; i < runewords.length; i++) {
         if (runewords[i].runes.every(rune => selectedRunesNoDupes.includes(rune))) {
             foundRunewords.push(runewords[i]);
@@ -2656,12 +2656,12 @@ function nonLadderToggle() {
     }
 }
 
-/*Displays Selected Runeword Filter*/
+/* Displays Selected Runeword Filter */
 $('.dropdown-menu a').click(function () {
     $('#runewords-filter').text($(this).text());
 })
 
-/*Off-Canvas Menu*/
+/* Off-Canvas Menu */
 function openOffcanvas() {
     document.getElementById("myOffcanvas").classList.add("offCanvasWidth");
     document.getElementById("runewords-nav").style.opacity = "100";
@@ -2692,7 +2692,7 @@ $(".rune-btn-check").change(function () {
     }
 });
 
-function save() {
+function saveRunes() {
     localStorage.setItem("btncheck1", btncheck1.checked);
     localStorage.setItem("btncheck2", btncheck2.checked);
     localStorage.setItem("btncheck3", btncheck3.checked);

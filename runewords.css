@@ -1,6 +1,7 @@
 .hero-image {
-    height: 25%;
-    margin-bottom: 50px;
+    height: 35%;
+    background-position: center;
+    margin-bottom: 75px;
 }
 
 #runes {
@@ -50,6 +51,7 @@
 #runewords-btns {
     width: 310px;
     text-align: center;
+    padding-bottom: 75px;
 }
 
 #runewords-btns .col button {

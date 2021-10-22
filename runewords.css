@@ -1,7 +1,6 @@
 .hero-image {
-    height: 35%;
+    height: 30%;
     background-position: center;
-    margin-bottom: 75px;
 }
 
 #runes {
@@ -17,7 +16,8 @@
 }
 
 .btn img {
-    height: 45px;
+    /* height: 45px; */
+    height: 53px;
 }
 
 .btn-group>.btn:not(:first-child) {
@@ -39,19 +39,23 @@
 }
 
 #select-all-outline {
-    width: 116.6px;
+    /* width: 116.6px; */
+    width: 133px;
 }
 
 #select-all-btn {
-    line-height: 45px;
+    /* line-height: 45px; */
+    line-height: 53px;
     font-family: exocet, serif;
-    font-size: .75rem;
+    /* font-size: .75rem; */
+    font-size: 1rem;
 }
 
 #runewords-btns {
-    width: 310px;
+    /* width: 310px; */
+    width: 355px;
     text-align: center;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
 }
 
 #runewords-btns .col button {
@@ -151,5 +155,14 @@
 @media only screen and (max-width: 768px) {
     .offCanvasWidth {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .hero-image {
+        height: 15%;
+    }
+    #runewords-btns {
+        padding-bottom: 0;
     }
 }

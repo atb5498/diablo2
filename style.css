@@ -7,6 +7,7 @@ body {
     height: 100%;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
 }
 
 .navbar {
@@ -39,14 +40,12 @@ body {
 
 .hero-text a {
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    font-size: 1.25rem;
 }
 
 .hero-text a:hover {
     text-shadow: 0 0 5px white;
-    font-weight: bold;
 }
 
 .hero-line {

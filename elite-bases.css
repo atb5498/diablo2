@@ -1,5 +1,5 @@
 .hero-image {
-    height: 35%;
+    height: 30%;
     background-position: center;
 }
 
@@ -16,10 +16,15 @@
 
 #armor-nav, #weapons-nav, #shields-nav {
     color: white;
+    border-radius: 0;
 }
 
 #armor-nav.active, .nav-pills .show>.nav-link {
-    background-color: #6A538D;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+    background-color: transparent;
+    border-bottom: 10px solid #6A538D;
+    transition: border .5s ease;
 }
 
 .armor-dropdown.active, .armor-dropdown:active {
@@ -27,7 +32,11 @@
 }
 
 #weapons-nav.active, .nav-pills .show>.nav-link {
-    background-color: #eca72c;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+    background-color: transparent;
+    border-bottom: 10px solid #eca72c;
+    transition: border .5s ease;
 }
 
 .weapons-dropdown.active, .weapons-dropdown:active {
@@ -35,7 +44,11 @@
 }
 
 #shields-nav.active, .nav-pills .show>.nav-link {
-    background-color: #ee5622;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+    background-color: transparent;
+    border-bottom: 10px solid #ee5622;
+    transition: border .5s ease;
 }
 
 .shields-dropdown.active, .shields-dropdown:active {
@@ -56,7 +69,14 @@
 
 #elite-bases-details {
     position: relative;
-    height: 550px;
+    height: 575px;
     overflow-y: scroll;
     font-family: exocet, serif;
+}
+
+@media only screen and (max-width: 576px) {
+    .hero-image {
+        height: 15%;
+        margin-bottom: 25px;
+    }
 }

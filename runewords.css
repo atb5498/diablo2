@@ -16,7 +16,6 @@
 }
 
 .btn img {
-    /* height: 45px; */
     height: 53px;
 }
 
@@ -39,20 +38,16 @@
 }
 
 #select-all-outline {
-    /* width: 116.6px; */
     width: 133px;
 }
 
 #select-all-btn {
-    /* line-height: 45px; */
     line-height: 53px;
     font-family: exocet, serif;
-    /* font-size: .75rem; */
     font-size: 1rem;
 }
 
 #runewords-btns {
-    /* width: 310px; */
     width: 355px;
     text-align: center;
     padding-bottom: 50px;
@@ -161,6 +156,19 @@
 @media only screen and (max-width: 576px) {
     .hero-image {
         height: 15%;
+    }
+    .btn img {
+        height: 45px;
+    }
+    #select-all-outline {
+        width: 116.6px;
+    }
+    #select-all-btn {
+        line-height: 45px;
+        font-size: .75rem;
+    }
+    #runewords-btns {
+        width: 311px;
     }
     #runewords-btns {
         padding-bottom: 0;

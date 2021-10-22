@@ -2692,6 +2692,10 @@ $(".rune-btn-check").change(function () {
     }
 });
 
+if (selectAllCheck.checked = true) {
+    selectAllBtn.innerText = "SELECT NONE";
+}
+
 function saveRunes() {
     localStorage.setItem("btncheck1", btncheck1.checked);
     localStorage.setItem("btncheck2", btncheck2.checked);

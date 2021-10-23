@@ -101,7 +101,6 @@ h3 {
 
 #low-runes h2 {
     color: #6A538D;
-    font-family: exocet, serif;
 }
 
 #mid-runes {
@@ -110,7 +109,6 @@ h3 {
 
 #mid-runes h2 {
     color: #eca72c;
-    font-family: exocet, serif;
 }
 
 #high-runes {
@@ -119,7 +117,6 @@ h3 {
 
 #high-runes h2 {
     color: #ee5622;
-    font-family: exocet, serif;
 }
 
 @media only screen and (max-width: 576px) {

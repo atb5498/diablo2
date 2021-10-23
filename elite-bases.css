@@ -1,3 +1,7 @@
+h3 {
+    font-family: exocet, serif;
+}
+
 .hero-image {
     height: 30%;
     background-position: center;
@@ -71,12 +75,46 @@
     position: relative;
     height: 575px;
     overflow-y: scroll;
-    font-family: exocet, serif;
+}
+
+.elite-bases-stats {
+    text-align: center;
+}
+
+.elite-bases-category {
+    color: gray;
+}
+
+.elite-bases-category div:last-child {
+    padding: 0;
+}
+
+.elite-bases-row {
+    border-bottom: 1px solid gray;
+}
+
+.elite-bases-row:last-child {
+    border: none;
+}
+
+.elite-bases-row div {
+    border-right: 1px solid gray;
+}
+
+.elite-bases-row div:last-child {
+    border-right: none;
+    padding: 0;
 }
 
 @media only screen and (max-width: 576px) {
     .hero-image {
         height: 15%;
         margin-bottom: 25px;
+    }
+    .elite-bases-category {
+        font-size: .75rem;
+    }
+    .elite-bases-row {
+        font-size: .75rem;
     }
 }

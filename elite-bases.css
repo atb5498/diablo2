@@ -3,13 +3,10 @@ h2, h3 {
     margin-bottom: 0;
 }
 
-.col-4 {
-    padding-left: 0;
-}
-
 .hero-image {
     height: 30%;
     background-position: center;
+    margin-bottom: 25px;
 }
 
 #elite-bases {
@@ -116,7 +113,6 @@ h2, h3 {
 @media only screen and (max-width: 576px) {
     .hero-image {
         height: 15%;
-        margin-bottom: 25px;
     }
     .elite-bases-category {
         font-size: .75rem;

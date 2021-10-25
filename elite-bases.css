@@ -3,6 +3,10 @@ h2, h3 {
     margin-bottom: 0;
 }
 
+.col-1, .col-2, .col-4, .col-5 {
+    padding: 0;
+}
+
 .hero-image {
     height: 30%;
     background-position: center;
@@ -107,7 +111,6 @@ h2, h3 {
 
 .elite-bases-row div:last-child {
     border-right: none;
-    padding: 0;
 }
 
 @media only screen and (max-width: 576px) {

@@ -1,6 +1,15 @@
+h1 {
+    margin-bottom: 0;
+}
+
 h2, h3 {
     font-family: exocet, serif;
     margin-bottom: 0;
+    float: left;
+}
+
+.container {
+    clear: both;
 }
 
 .col-1, .col-2, .col-4, .col-5 {
@@ -74,6 +83,53 @@ h2, h3 {
 }
 
 .shields {
+    color: #ee5622;
+}
+
+.info {
+    position: relative;
+    border-bottom: 1px dotted black;
+    float: right;
+}
+
+.info .info-text {
+    visibility: hidden;
+    width: 202px;
+    background-color: #0B0A0B;
+    color: #fff;
+    border-radius: 6px;
+    padding: 15px 10px 10px 10px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 110%;
+    font-size: .75rem;
+}
+
+.info .info-text::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #0B0A0B;
+}
+
+.info:hover .info-text {
+    visibility: visible;
+}
+
+.info-armor {
+    color: #6A538D;
+}
+
+.info-weapons {
+    color: #eca72c;
+}
+
+.info-shields {
     color: #ee5622;
 }
 

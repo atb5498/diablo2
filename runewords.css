@@ -1,3 +1,7 @@
+h1 {
+    margin-bottom: 0;
+}
+
 .hero-image {
     height: 30%;
     background-position: center;
@@ -93,7 +97,7 @@
     width: 0;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #0B0A0B;
     position: fixed;
     z-index: 3;
     overflow-x: hidden;

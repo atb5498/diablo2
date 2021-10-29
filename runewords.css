@@ -62,14 +62,10 @@ h1 {
     font-family: exocet, serif;
 }
 
-#save-btn:hover {
-    background-color: transparent;
-    color: white;
-}
-
 #save-btn:focus {
     background-color: transparent;
-    transition: all 3s ease;
+    color: white;
+    transition: all 2s ease;
 }
 
 #save-btn:active {

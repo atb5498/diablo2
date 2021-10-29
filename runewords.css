@@ -68,11 +68,6 @@ h1 {
     transition: all 2s ease;
 }
 
-#save-btn:active {
-    background-color: white;
-    color: #000;
-}
-
 .overlay3 {
     height: 100%;
     width: 0;
